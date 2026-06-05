@@ -1,0 +1,55 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: url('/images/IMG_4051.PNG') center / cover no-repeat;
+}
+
+.heroContent {
+  max-width: 700px;
+}
+
+.scrollDown {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--brown);
+  color: var(--brown);
+  font-size: 28px;
+  background: rgba(255, 251, 232, 0.2);
+  backdrop-filter: blur(6px);
+  text-shadow: 0 0 10px rgba(139, 111, 71, 0.4);
+  animation: bounce 1.5s infinite;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.scrollDown:hover {
+  background: var(--brown);
+  color: var(--cream);
+  animation: none;
+  transform: translateX(-50%) scale(1.1);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(12px); }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background: url('/images/IMG_4051.PNG') center / contain no-repeat;
+    background-color: var(--cream);
+    justify-content: center;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,10 @@
+.section {
+  padding: 90px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  justify-content: center;
+  gap: 30px;
+}
