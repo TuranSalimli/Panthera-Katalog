@@ -456,3 +456,14 @@ html {
   .category-card img { height: 180px; }
   .slider-btn { width: 45px; height: 45px; font-size: 30px; }
 }
+.social-icon {
+  transform: translateY(3px);
+}
+.footer-box a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-box a:hover {
+  text-decoration: underline;
+}

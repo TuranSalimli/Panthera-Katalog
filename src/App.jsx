@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import "./App.css";
+import { FaInstagram } from "react-icons/fa";
 
 const flowers = [
   { id: 1,  name: "Home",           price: "₼200", category: "buket",        image: "images/Home.jpg.jpeg" },
@@ -50,35 +51,51 @@ const flowers = [
   { id: 46, name: "Dancing Human E",   price: "₼247.50", category: "heykel", image: "images/Dancing Human E.jpg.jpeg" },
   { id: 47, name: "Dou Neon Pup",      price: "₼197.50", category: "heykel", image: "images/Big Neon Pup.jpg.jpeg" },
   { id: 48, name: "Big Boy Monkey",    price: "₼95", category: "heykel",     image: "images/BIg Boy Monkey .jpg.jpeg" },
-  { id: 49, name: "White Aphrodite", price: "₼95", category: "vazo", image: "images/Vhite Afrodit.jpg.jpeg" },
-  { id: 50, name: "Antique Clock", price: "₼95", category: "heykel", image: "images/Antquie Clock.jpg.jpeg" },
-  { id: 51, name: "Ballerina", price: "₼95", category: "heykel", image: "images/Ballerina.jpg.jpeg" },
-  { id: 52, name: "Bermuda Clock", price: "₼95", category: "heykel", image: "images/Bermuda Clock.jpg.jpeg" },
-  { id: 53, name: "Black Night E(b)", price: "₼95", category: "vazo", image: "images/Black Night E(b).jpg.jpeg" },
-  { id: 54, name: "Black Night Mini E(v)", price: "₼95", category: "vazo", image: "images/Black Night Mini E(v).jpg.jpeg" },
-  { id: 55, name: "Black Night Mini E", price: "₼95", category: "vazo", image: "images/Black Night Mini E.jpg.jpeg" },
-  { id: 56, name: "Blue Fire Vase (01)", price: "₼95", category: "vazo", image: "images/Blue Fire Vase(01).jpg.jpeg" },
-  { id: 57, name: "Blue Fire Vision", price: "₼95", category: "vazo", image: "images/Blue Fire Vision.jpg.jpeg" },
-  { id: 58, name: "Blue Fire", price: "₼95", category: "vazo", image: "images/Blue Fire.jpg.jpeg" },
-  { id: 59, name: "Colm Clock", price: "₼95", category: "saat", image: "images/Colm Clock.jpg.jpeg" },
-  { id: 60, name: "Cubic Man E", price: "₼95", category: "heykel", image: "images/Cubic Man E.jpg.jpeg" },
-  { id: 61, name: "Double Minaret Clock", price: "₼95", category: "heykel", image: "images/Double Minaret Clock.jpg.jpeg" },
-  { id: 62, name: "Drop Vase", price: "₼95", category: "vazo", image: "images/Drop Vase.jpg.jpeg" },
-  { id: 63, name: "Earth Time", price: "₼95", category: "heykel", image: "images/Earth Time.jpg.jpeg" },
-  { id: 64, name: "Elephant's bone Vase", price: "₼95", category: "vazo", image: "images/Elephant`s bone Vase.jpg.jpeg" },
-  { id: 65, name: "Gold At Night E(b)", price: "₼95", category: "vazo", image: "images/Gold At Night E(b).jpg.jpeg" },
-  { id: 66, name: "Gold Ivy Vase(01)", price: "₼95", category: "vazo", image: "images/Gold lvy Vase(01).jpg.jpeg" },
-  { id: 67, name: "Gold Woman", price: "₼95", category: "heykel", image: "images/Gold Voman.jpg.jpeg" },
-  { id: 68, name: "Horse Head", price: "₼95", category: "heykel", image: "images/Horse Head.jpg.jpeg" },
-  { id: 69, name: "Indian Double Elephant", price: "₼95", category: "heykel", image: "images/İndian Double Elephant.jpg.jpeg" },
-  { id: 70, name: "Iron Time E", price: "₼95", category: "heykel", image: "images/İron Time E.jpg.jpeg" },
-  { id: 71, name: "Japanese Flower Vase", price: "₼95", category: "vazo", image: "images/Japanse Flover Vase.jpg.jpeg" },
-  { id: 72, name: "Japanese Vase", price: "₼95", category: "vazo", image: "images/Japanse Vase.jpg.jpeg" },
-  { id: 73, name: "Little Monstera Leaf", price: "₼95", category: "heykel", image: "images/Little Monstera Leaf.jpg.jpeg" },
-  { id: 74, name: "Molecul Girl", price: "₼95", category: "heykel", image: "images/Molecul Girl.jpg.jpeg" },
-  { id: 75, name: "Monstera Leaf", price: "₼95", category: "heykel", image: "images/Monstear Leaf.jpg.jpeg" },
-  { id: 76, name: "Triple Gold Birds", price: "₼95", category: "heykel", image: "images/Triple Gold Brids.jpg.jpeg" },
-  { id: 77, name: "White Aphrodite", price: "₼95", category: "vazo", image: "images/Vhite Afrodit.jpg.jpeg" },
+  { id: 49, name: "White Aphrodite",   price: "₼317.50", category: "vazo", image: "images/Vhite Afrodit.jpg.jpeg" },
+  { id: 50, name: "Antique Clock",     price: "₼175", category: "heykel", image: "images/Antquie Clock.jpg.jpeg" },
+  { id: 51, name: "Ballerina",         price: "₼187.50", category: "heykel", image: "images/Ballerina.jpg.jpeg" },
+  { id: 52, name: "Bermuda Clock",     price: "₼150", category: "heykel", image: "images/Bermuda Clock.jpg.jpeg" },
+  { id: 53, name: "Black Night E(b)",  price: "₼75", category: "vazo", image: "images/Black Night E(b).jpg.jpeg" },
+  { id: 54, name: "Black Night Mini E(v)", price: "₼55", category: "vazo", image: "images/Black Night Mini E(v).jpg.jpeg" },
+  { id: 55, name: "Black Night Mini E", price: "₼55", category: "vazo", image: "images/Black Night Mini E.jpg.jpeg" },
+  { id: 56, name: "Blue Fire Vase (01)",price: "₼150", category: "vazo", image: "images/Blue Fire Vase(01).jpg.jpeg" },
+  { id: 57, name: "Blue Fire Vision",   price: "₼187.50", category: "vazo", image: "images/Blue Fire Vision.jpg.jpeg" },
+  { id: 58, name: "Blue Fire", price: "₼150", category: "vazo", image: "images/Blue Fire.jpg.jpeg" },
+  { id: 59, name: "Colm Clock",price: "₼500", category: "saat", image: "images/Colm Clock.jpg.jpeg" },
+  { id: 60, name: "Cubic Man E",price: "₼100", category: "heykel", image: "images/Cubic Man E.jpg.jpeg" },
+  { id: 61, name: "Double Minaret Clock",price: "₼575", category: "heykel", image: "images/Double Minaret Clock.jpg.jpeg" },
+  { id: 62, name: "Drop Vase", price: "₼275", category: "vazo", image: "images/Drop Vase.jpg.jpeg" },
+  { id: 63, name: "Earth Time",price: "₼97.5", category: "heykel", image: "images/Earth Time.jpg.jpeg" },
+  { id: 64, name: "Elephant's bone Vase", price: "₼300", category: "vazo", image: "images/Elephant`s bone Vase.jpg.jpeg" },
+  { id: 65, name: "Gold At Night E(b)",   price: "₼67.50", category: "vazo", image: "images/Gold At Night E(b).jpg.jpeg" },
+  { id: 66, name: "Gold Ivy Vase(01)", price: "₼150", category: "vazo", image: "images/Gold lvy Vase(01).jpg.jpeg" },
+  { id: 67, name: "Gold Woman",price: "₼300", category: "heykel", image: "images/Gold Voman.jpg.jpeg" },
+  { id: 68, name: "Horse Head",price: "₼142.50", category: "heykel", image: "images/Horse Head.jpg.jpeg" },
+  { id: 69, name: "Indian Double Elephant", price: "₼300", category: "heykel", image: "images/İndian Double Elephant.jpg.jpeg" },
+  { id: 70, name: "Iron Time E", price: "₼110", category: "heykel", image: "images/İron Time E.jpg.jpeg" },
+  { id: 71, name: "Japanese Flower Vase", price: "₼175", category: "vazo", image: "images/Japanse Flover Vase.jpg.jpeg" },
+  { id: 72, name: "Japanese Vase", price: "₼300", category: "vazo", image: "images/Japanse Vase.jpg.jpeg" },
+  { id: 73, name: "Little Monstera Leaf", price: "₼100", category: "heykel", image: "images/Little Monstera Leaf.jpg.jpeg" },
+  { id: 74, name: "Molecul Girl", price: "₼222.50", category: "heykel", image: "images/Molecul Girl.jpg.jpeg" },
+  { id: 75, name: "Monstera Leaf", price: "₼137.50", category: "heykel", image: "images/Monstear Leaf.jpg.jpeg" },
+  { id: 76, name: "Triple Gold Birds", price: "₼400", category: "heykel", image: "images/Triple Gold Brids.jpg.jpeg" },
+  { id: 77, name: "Little Gold Fish", price: "₼95", category: "heykel", image: "images/Little Gold Fish.jpeg" },
+  { id: 78, name: "Swarovski Cuckoo", price: "₼322.50", category: "heykel", image: "images/Swarovksi Cuckoo.jpeg" },
+  { id: 79, name: "Jupiter Man", price: "₼137.50", category: "heykel", image: "images/Jupiter Man.jpeg" },
+  { id: 80, name: "Big The Mask ", price: "₼162.50", category: "heykel", image: "images/Big The Mask.jpeg" },
+  { id: 81, name: "Mystical Egyptian Cat E", price: "₼162.50", category: "heykel", image: "images/Mystical Egyptian Cat E.jpg.jpeg" },
+  { id: 82, name: "Circual Man E", price: "₼100", category: "heykel", image: "images/Circual Man E.jpg.jpeg" },
+  { id: 83, name: "Marble Clock E", price: "₼172.50", category: "heykel", image: "images/Marble Clock E.jpg.jpeg" },
+  { id: 84, name: "Tiffany Minaret Clock", price: "₼325", category: "heykel", image: "images/Tiffany Minaret Clock.jpg.jpeg" },
+  { id: 85, name: "Tiffany Retro Clock", price: "₼275", category: "heykel", image: "images/Tiffany Retro Clock.jpg.jpeg" },
+  { id: 86, name: "Music Note", price: "₼95", category: "heykel", image: "images/Music Note.jpg .jpeg" },
+  { id: 87, name: "Music Note Treble", price: "₼95", category: "heykel", image: "images/Music Note Treble.jpg.jpeg" },
+  { id: 88, name: "Music Note Eighth Note", price: "₼95", category: "heykel", image: "images/Music Note Eighth Note.jpg.jpeg" },
+  { id: 89, name: "White Mondeals Vase", price: "₼145", category: "vazo", image: "images/Vhite Mondeals Vase.jpg.jpeg" },
+  { id: 90, name: "White Mondeals Vase(01) E", price: "₼145", category: "vazo", image: "images/Vhite Mondeals Vase(01).jpg.jpeg" },
+  { id: 91, name: "White Night E", price: "₼75", category: "vazo", image: "images/Vhite Night E.jpg .jpeg" },
+  { id: 92, name: "Gold At Night E", price: "₼67.50", category: "vazo", image: "images/Gold At Night E.jpg.jpeg" },
+  { id: 93, name: "Little Gold lvy Vase(01)", price: "₼150", category: "vazo", image: "images/Little Gold lvy Vase(01).jpg.jpeg" },
 ];
 
 const categories = [
@@ -186,6 +203,27 @@ export default function App() {
               <h3>Əlaqə</h3>
               <p>+994 51 419 11 66</p>
               <p>pantheraflowers@gmail.com</p>
+ <p>
+  <a
+    href="https://www.instagram.com/panthera.floralstudio"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaInstagram className="social-icon" />
+    {" "}panthera.floralstudio
+  </a>
+</p>
+
+<p>
+  <a
+    href="https://www.instagram.com/panthera.souvenir"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaInstagram className="social-icon" />
+    {" "}panthera.souvenir
+  </a>
+</p>
               <p>Bakı, Azərbaycan</p>
             </div>
             <div className="footer-box">
