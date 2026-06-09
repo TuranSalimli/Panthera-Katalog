@@ -467,3 +467,73 @@ html {
 .footer-box a:hover {
   text-decoration: underline;
 }
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+.price-filter {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+
+  width: 90%;
+  max-width: 450px;
+
+  padding: 14px;
+
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(139, 111, 71, 0.2);
+  border-radius: 14px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
+}
+
+.price-filter input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  color: #2d2a26;
+  font-weight: 500;
+}
+
+.price-filter input::placeholder {
+  color: #a08c6a;
+}
+.price-filter input {
+  flex: 1;
+}
+@media (max-width: 900px) {
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .price-filter {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.price-separator {
+  width: 2px;
+  height: 24px;
+  background: rgba(139, 111, 71, 0.5);
+  flex-shrink: 0;
+
+   align-self: center; 
+}

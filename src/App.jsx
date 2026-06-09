@@ -109,10 +109,25 @@ const categories = [
 export default function App() {
   const [activeCategory, setActiveCategory] = useState(null);
   const [modalSrc, setModalSrc] = useState(null);
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
+  const getPriceNumber = (price) => {
+  return Number(price.replace("₼", "").replace(",", "."));
+};
+  const filtered = flowers.filter((f) => {
+  const price = getPriceNumber(f.price);
 
-  const filtered = activeCategory
-    ? flowers.filter(f => f.category === activeCategory)
-    : flowers;
+  const categoryMatch =
+    !activeCategory || f.category === activeCategory;
+
+  const minMatch =
+    !minPrice || price >= Number(minPrice);
+
+  const maxMatch =
+    !maxPrice || price <= Number(maxPrice);
+
+  return categoryMatch && minMatch && maxMatch;
+});
 
   const handleCategoryClick = useCallback((key) => {
     setActiveCategory(key);
@@ -149,7 +164,9 @@ export default function App() {
       <section className="section" id="catalog">
         <div className="container">
           <div className="filter-buttons">
+            
             <div className="category-grid">
+            
               {categories.map(cat => (
                 <div
                   key={cat.key}
@@ -160,7 +177,23 @@ export default function App() {
                   <img src={cat.img} alt={cat.label} loading="eager" decoding="async" />
                 </div>
               ))}
+              
             </div>
+              <div className="price-filter">
+<input
+    type="number"
+    placeholder="Min qiymət"
+    value={minPrice}
+    onChange={(e) => setMinPrice(e.target.value)}
+  />
+  <span className="price-separator"></span>
+  <input
+    type="number"
+    placeholder="Max qiymət"
+    value={maxPrice}
+    onChange={(e) => setMaxPrice(e.target.value)}
+  />
+</div>
           </div>
 
           <div className="section-title" />
