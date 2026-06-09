@@ -174,7 +174,7 @@ export default function App() {
                   data-category={cat.key}
                   onClick={() => handleCategoryClick(cat.key)}
                 >
-                  <img src={cat.img} alt={cat.label} loading="eager" decoding="async" />
+                  <img src={cat.img} alt={cat.label} loading="lazy" decoding="async" />
                 </div>
               ))}
               
@@ -208,7 +208,7 @@ export default function App() {
                 <img
                   src={flower.image}
                   alt={flower.name}
-                  loading="eager"
+                  loading="lazy"
                   decoding="async"
                   fetchpriority="high"
                 />
@@ -274,7 +274,7 @@ export default function App() {
       {/* MODAL */}
       {modalSrc && (
         <div className="image-modal active" onClick={closeModal}>
-          <img src={modalSrc} alt="" loading="eager" decoding="sync" />
+          <img src={modalSrc} alt="" loading="lazy" decoding="async" />
         </div>
       )}
     </>
