@@ -537,9 +537,7 @@ html {
 
    align-self: center; 
 }
-/* --- YENİLƏNMİŞ MODAL CSS --- */
 
-/* Modalın özünün arxa fonu */
 .image-modal.active {
   display: flex;
   justify-content: center;
@@ -549,35 +547,32 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.85); /* Arxa fonu bir az daha tündləşdirdik */
+  background-color: rgba(0, 0, 0, 0.85); 
   z-index: 1000;
   cursor: pointer;
-  overflow: hidden; /* Ekrandan kənara çıxmasın */
+  overflow: hidden;
 }
 
-/* Şəkil və düyməni saxlayan əsas blok */
 .modal-content-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; /* Şəkil və düymə arasındakı məsafə */
-  max-width: 90%; /* Ekranın 90%-dən geniş olmasın */
-  max-height: 90vh; /* Ekran hündürlüyünün 90%-dən hündür olmasın */
-  cursor: default; /* Klikləyəndə modal bağlanmasın */
+  gap: 20px; 
+  max-width: 90%; 
+  max-height: 90vh; 
+  cursor: default;
 }
 
-/* Modalın içindəki Şəkil */
 .image-modal.active .modal-content-wrapper img {
-  max-width: 100%; /* Blokun içinə sığışdır */
-  max-height: calc(90vh - 80px); /* Hündürlüyü elə tənzimlə ki, düyməyə yer qalsın */
-  object-fit: contain; /* Şəkli deformasiya etmədən sığışdır */
-  border-radius: 8px; /* Kənarlarını bir az yumşalt */
+  max-width: 100%; 
+  max-height: calc(90vh - 80px); 
+  object-fit: contain; 
+  border-radius: 8px; 
   box-shadow: 0 5px 25px rgba(0,0,0,0.5);
 }
 
-/* WhatsApp Düyməsinin Stili (Eyni qalır, sadəcə bəzi düzəlişlər) */
 .whatsapp-order-btn {
-  background-color: #25D366; /* WhatsApp Yaşılı */
+  background-color: #25D366; 
   color: white;
   padding: 14px 28px;
   font-size: 16px;
@@ -589,19 +584,17 @@ html {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 200px; /* Düymə çox balaca görünməsin */
-  margin-bottom: 10px; /* Aşağıdan bir az məsafə */
+  min-width: 200px; 
+  margin-bottom: 10px; 
 }
 
-/* Düymənin üzərinə gələndə effekti */
 .whatsapp-order-btn:hover {
   background-color: #128C7E;
-  transform: translateY(-2px); /* Bir az yuxarı qalxsın */
+  transform: translateY(-2px); 
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  color: white; /* Rəngi qorusun */
+  color: white; 
 }
 
-/* Düyməni klikləyəndə effekti */
 .whatsapp-order-btn:active {
   transform: translateY(1px);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);

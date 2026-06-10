@@ -342,21 +342,16 @@ export default function App() {
           </div>
         </div>
       </footer>
-
-      {/* MODAL */}
       {/* MODAL */}
       {modalSrc && (() => {
-        // Mövcud modalSrc (şəkil linki) vasitəsilə aktiv məhsulu tapırıq
         const selectedFlower = flowers.find(f => f.image === modalSrc);
-        
-        // WhatsApp mesaj formatını hazırlayırıq
         const message = selectedFlower 
           ? `Salam! Panthera kataloqundan bu məhsulla maraqlanıram: *${selectedFlower.name}* - *${selectedFlower.price}*.\nŞəklin linki: ${window.location.origin}/${selectedFlower.image}`
           : "Salam! Panthera kataloqundan bir məhsulla maraqlanıram.";
 
         // Linki təhlükəsiz formata salırıq (URL encode)
-        const whatsappUrl = `https://wa.me/994514191166?text=${encodeURIComponent(message)}`;
-
+       // Köhnə sətirlə (https://wa.me/...) əvəz et:
+const whatsappUrl = `https://api.whatsapp.com/send/?phone=994514191166&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
         return (
           <div className="image-modal active" onClick={closeModal}>
             <div className="modal-content-wrapper" onClick={(e) => e.stopPropagation()}>
