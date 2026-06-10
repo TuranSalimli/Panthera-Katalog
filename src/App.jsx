@@ -344,11 +344,37 @@ export default function App() {
       </footer>
 
       {/* MODAL */}
-      {modalSrc && (
-        <div className="image-modal active" onClick={closeModal}>
-          <img src={modalSrc} alt="" loading="lazy" decoding="async" />
-        </div>
-      )}
+      {/* MODAL */}
+      {modalSrc && (() => {
+        // Mövcud modalSrc (şəkil linki) vasitəsilə aktiv məhsulu tapırıq
+        const selectedFlower = flowers.find(f => f.image === modalSrc);
+        
+        // WhatsApp mesaj formatını hazırlayırıq
+        const message = selectedFlower 
+          ? `Salam! Panthera kataloqundan bu məhsulla maraqlanıram: *${selectedFlower.name}* - *${selectedFlower.price}*.\nŞəklin linki: ${window.location.origin}/${selectedFlower.image}`
+          : "Salam! Panthera kataloqundan bir məhsulla maraqlanıram.";
+
+        // Linki təhlükəsiz formata salırıq (URL encode)
+        const whatsappUrl = `https://wa.me/994514191166?text=${encodeURIComponent(message)}`;
+
+        return (
+          <div className="image-modal active" onClick={closeModal}>
+            <div className="modal-content-wrapper" onClick={(e) => e.stopPropagation()}>
+              <img src={modalSrc} alt="" loading="lazy" decoding="async" />
+              
+              {/* WhatsApp ilə Sifariş Et Düyməsi */}
+              <a 
+                href={whatsappUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="whatsapp-order-btn"
+              >
+                WhatsApp ilə Sifariş Et
+              </a>
+            </div>
+          </div>
+        );
+      })()}
     </>
   );
 }
