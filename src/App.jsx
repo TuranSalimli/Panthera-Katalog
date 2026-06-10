@@ -342,16 +342,19 @@ export default function App() {
           </div>
         </div>
       </footer>
-      {/* MODAL */}
-      {modalSrc && (() => {
-        const selectedFlower = flowers.find(f => f.image === modalSrc);
-        const message = selectedFlower 
-          ? `Salam! Panthera kataloqundan bu məhsulla maraqlanıram: *${selectedFlower.name}* - *${selectedFlower.price}*.\nŞəklin linki: ${window.location.origin}/${selectedFlower.image}`
-          : "Salam! Panthera kataloqundan bir məhsulla maraqlanıram.";
+    {modalSrc && (() => {
+  const selectedFlower = flowers.find(f => f.image === modalSrc);
+  
+  // 1. Məlumatları təhlükəsiz şəkildə hazırlayırıq
+  const flowerName = selectedFlower ? selectedFlower.name : "Kataloq məhsulu";
+  const flowerPrice = selectedFlower ? selectedFlower.price : "";
+  const imageUrl = selectedFlower ? `${window.location.origin}/${selectedFlower.image}` : "";
 
-        // Linki təhlükəsiz formata salırıq (URL encode)
-       // Köhnə sətirlə (https://wa.me/...) əvəz et:
-const whatsappUrl = `https://api.whatsapp.com/send/?phone=994514191166&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
+  // 2. Mesaj mətnini təmiz string formatına salırıq
+  const messageText = `Salam! Panthera kataloqundan bu məhsulla maraqlanıram:\n\nMəhsul: ${flowerName}\nQiymət: ${flowerPrice}\nLink: ${imageUrl}`;
+
+  // 3. BÜTÜN mesajı encode edirik ki, boşluqlar və simvollar linki qırmasın
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=994558739416&text=${encodeURIComponent(messageText)}`;
         return (
           <div className="image-modal active" onClick={closeModal}>
             <div className="modal-content-wrapper" onClick={(e) => e.stopPropagation()}>
