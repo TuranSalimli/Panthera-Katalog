@@ -599,3 +599,86 @@ html {
   transform: translateY(1px);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+/* İki fərqli funksiyanı yan-yana və mərkəzdə saxlayan sətir */
+.filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Qutuların arasındakı qəşəng məsafə */
+  width: 100%;
+  flex-wrap: wrap; /* Mobildə alt-üstdə təmiz düşməsi üçün */
+}
+
+/* Sənin o premium Min/Max qutun */
+.price-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px; /* Eni yığcamlaşdırdıq ki, select ilə çox sıxışmasınlar */
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(139, 111, 71, 0.2);
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
+}
+
+.price-filter input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  color: #2d2a26;
+  font-weight: 500;
+}
+
+.price-filter input::placeholder {
+  color: #a08c6a;
+}
+
+.price-separator {
+  width: 2px;
+  height: 24px;
+  background: rgba(139, 111, 71, 0.5);
+  flex-shrink: 0;
+  align-self: center; 
+}
+
+/* Sıralama üçün tamamilə ayrıca, aralı duran yeni qutucuq */
+.sort-filter-box {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(139, 111, 71, 0.2);
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(8px);
+  min-width: 170px;
+}
+
+/* Select elementinin daxili təmizliyi */
+.sort-select {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  color: #2d2a26;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sort-select:hover, .sort-select:focus {
+  color: #8b6f47; /* Üstünə gələndə və ya seçəndə Panthera qızılı rəngi */
+}
+
+/* Mobil ekranlar üçün qutuların tam en alması */
+@media (max-width: 600px) {
+  .price-filter, .sort-filter-box {
+    width: 100%;
+    max-width: 100%;
+  }
+}

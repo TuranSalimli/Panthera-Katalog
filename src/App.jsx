@@ -29,7 +29,7 @@ const flowers = [
   { id: 24, name: "Memories",       price: "₼100", category: "buket",        image: "images/Memories.jpg.webp" },
   { id: 25, name: "Purple Moon",    price: "₼80", category: "buket",        image: "images/Purple Moon.jpg.webp" },
   { id: 26, name: "Silent",         price: "₼200", category: "kompozisiya",  image: "images/Silent.webp" },
-
+  
   { id: 28, name: "Rise",           price: "₼100", category: "buket",        image: "images/Rise.jpg.webp" },
   { id: 29, name: "Saturn",         price: "₼195", category: "buket",        image: "images/Saturn.jpg.webp" },
   { id: 30, name: "Red Dream",      price: "₼90", category: "buket",        image: "images/Red Dream.webp" },  
@@ -218,6 +218,7 @@ export default function App() {
   const [modalSrc, setModalSrc] = useState(null);
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
+  const [sortOrder, setSortOrder] = useState("");
   const getPriceNumber = (price) => {
   return Number(price.replace("₼", "").replace(",", "."));
 };
@@ -232,9 +233,14 @@ export default function App() {
 
   const maxMatch =
     !maxPrice || price <= Number(maxPrice);
-
+  
   return categoryMatch && minMatch && maxMatch;
 });
+if (sortOrder === "asc") {
+  filtered.sort((a, b) => getPriceNumber(a.price) - getPriceNumber(b.price));
+} else if (sortOrder === "desc") {
+  filtered.sort((a, b) => getPriceNumber(b.price) - getPriceNumber(a.price));
+}
 
   const handleCategoryClick = useCallback((key) => {
     setActiveCategory(key);
@@ -286,20 +292,38 @@ export default function App() {
               ))}
               
             </div>
-              <div className="price-filter">
-<input
-    type="number"
-    placeholder="Min qiymət"
-    value={minPrice}
-    onChange={(e) => setMinPrice(e.target.value)}
-  />
-  <span className="price-separator"></span>
-  <input
-    type="number"
-    placeholder="Max qiymət"
-    value={maxPrice}
-    onChange={(e) => setMaxPrice(e.target.value)}
-  />
+             {}
+<div className="filter-row">
+
+  {}
+  <div className="price-filter">
+    <input
+      type="number"
+      placeholder="Min qiymət"
+      value={minPrice}
+      onChange={(e) => setMinPrice(e.target.value)}
+    />
+    <span className="price-separator"></span>
+    <input
+      type="number"
+      placeholder="Max qiymət"
+      value={maxPrice}
+      onChange={(e) => setMaxPrice(e.target.value)}
+    />
+  </div>
+
+  {}
+  <div className="sort-filter-box">
+    <select 
+      className="sort-select"
+      value={sortOrder} 
+      onChange={(e) => setSortOrder(e.target.value)}
+    >
+      <option value="">Sıralama</option>
+      <option value="asc">Qiymət: Azdan çoxa</option>
+      <option value="desc">Qiymət: Çoxdan aza</option>
+    </select>
+  </div>
 </div>
           </div>
 
