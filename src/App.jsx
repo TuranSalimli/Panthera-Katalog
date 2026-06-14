@@ -3,74 +3,74 @@ import "./App.css";
 import { FaInstagram } from "react-icons/fa";
 
 const flowers = [
-  { id: 1,  name: "Home",           price: "₼120", category: "buket",        image: "images/Home.jpg.webp" },
-  { id: 2,  name: "Lily World",     price: "₼150", category: "buket",        image: "images/Lily World.jpg.webp" },
-  { id: 3,  name: "Soft Life",      price: "₼230", category: "buket",        image: "images/Soft Life.jpg.webp" },
-  { id: 4,  name: "Paeony Utopia",  price: "₼510", category: "buket",        image: "images/Paeony Utopia.webp" },
-  { id: 5,  name: "Red Box",        price: "₼350", category: "kompozisiya",  image: "images/Red Box.jpg.webp" },
-  { id: 6,  name: "Time to Fall",   price: "₼265", category: "kompozisiya",  image: "images/Time to Fall.webp" },
-  { id: 7,  name: "Bouquet",        price: "₼90", category: "buket",        image: "images/Bouquet 002.webp" },
-  { id: 8,  name: "Electric Silver",price: "₼135", category: "buket",        image: "images/Electric Silver.jpg.webp" },
-  { id: 9,  name: "Far Away",       price: "₼190", category: "kompozisiya",  image: "images/Far Away.jpg.webp" },
-  { id: 10, name: "Just Happy",     price: "₼180", category: "buket",        image: "images/Just Happy.jpg.webp" },
-  { id: 11, name: "Pink Wave",      price: "₼210", category: "kompozisiya",  image: "images/Pink Wave.jpg.webp" },
-  { id: 12, name: "Silver Light",   price: "₼170", category: "buket",        image: "images/Silver Light.jpg.webp" },
-  { id: 13, name: "Yellow Love",    price: "₼130", category: "kompozisiya",  image: "images/Yellow Love.jpg.webp" },
-  { id: 14, name: "Mix Bouquet",    price: "₼350", category: "buket",        image: "images/Mix Bouquet.webp" },
-  { id: 15, name: "Jasmin",         price: "₼70", category: "buket",        image: "images/Jasmin.webp" },
-  { id: 16, name: "Jasmin Wave",    price: "₼200", category: "buket",        image: "images/Jasmin Wave.webp" },
-  { id: 17, name: "Yellow Dance",   price: "₼130", category: "buket",        image: "images/130 fdf.jpg.webp" },
-  { id: 18, name: "Charm",          price: "₼140", category: "kompozisiya",  image: "images/Charm.jpg.webp" },
-  { id: 19, name: "Green Confused", price: "₼250", category: "kompozisiya",  image: "images/Green Confused.jpg.webp" },
-  { id: 20, name: "Lonely",         price: "₼120", category: "buket",        image: "images/Lonely.webp" },
-  { id: 21, name: "Invesible",      price: "₼115", category: "buket",        image: "images/Invesible.jpg.webp" },
-  { id: 22, name: "Pink Dance",     price: "₼170", category: "buket",        image: "images/Pink dance.webp" },
-  { id: 23, name: "Lucky",          price: "₼120", category: "kompozisiya",  image: "images/Lucky.jpg.webp" },
-  { id: 24, name: "Memories",       price: "₼100", category: "buket",        image: "images/Memories.jpg.webp" },
-  { id: 25, name: "Purple Moon",    price: "₼80", category: "buket",        image: "images/Purple Moon.jpg.webp" },
-  { id: 26, name: "Silent",         price: "₼200", category: "kompozisiya",  image: "images/Silent.webp" },
-  
-  { id: 28, name: "Rise",           price: "₼100", category: "buket",        image: "images/Rise.jpg.webp" },
-  { id: 29, name: "Saturn",         price: "₼195", category: "buket",        image: "images/Saturn.jpg.webp" },
-  { id: 30, name: "Red Dream",      price: "₼90", category: "buket",        image: "images/Red Dream.webp" },  
-  { id: 31, name: "Soul",           price: "₼85", category: "buket",        image: "images/Soul.jpg.webp" },
-  { id: 32, name: "Pink Souls",     price: "₼155", category: "buket",        image: "images/Pink Souls.jpg.webp" },
-  { id: 33, name: "Story",          price: "₼145", category: "buket",        image: "images/Story.jpg.webp" },
-  { id: 34, name: "Time",           price: "₼90", category: "buket",        image: "images/Time.jpg.webp" },
-  { id: 35, name: "True Love",      price: "₼190", category: "kompozisiya",  image: "images/True Love.jpg.webp" },
-  { id: 36, name: "White Life",     price: "₼120", category: "gelin-buketleri",image: "images/White Life.jpg.webp" },
-  { id: 37, name: "Yellow Lily",    price: "₼100", category: "buket",        image: "images/Yellow Lily.jpg.webp" },
-  { id: 38, name: "Venera Statue",     price: "₼812.50", category: "heykel", image: "images/Venera Statue.jpg.webp" },
-  { id: 39, name: "Twin Deers E",      price: "₼197.50", category: "heykel", image: "images/Twin Deers E .jpg.webp" },
-  { id: 40, name: "Monkey Musician",   price: "₼125", category: "heykel",    image: "images/Monkey Musician .jpg.webp" },
-  { id: 41, name: "Last Dance E",      price: "₼162.50", category: "heykel", image: "images/Last Dance E.jpg.webp" },
-  { id: 42, name: "Iron Orbit Clock E",price: "₼222.5", category: "heykel",  image: "images/Iron Orbit Clock E .jpg.webp" },
-  { id: 43, name: "India Lady Tiger",  price: "₼107.50", category: "heykel", image: "images/India Lady Tiger .jpg.webp" },
-  { id: 44, name: "Egypt Panthera",    price: "₼100", category: "heykel",    image: "images/Egypt Panthera .jpg.webp" },
-  { id: 45, name: "Ebru Panthera",     price: "₼200", category: "heykel",    image: "images/Ebru Panthera.jpg.webp" },
-  { id: 46, name: "Dancing Human E",   price: "₼247.50", category: "heykel", image: "images/Dancing Human E.jpg.webp" },
-  { id: 47, name: "Dou Neon Pup",      price: "₼197.50", category: "heykel", image: "images/Big Neon Pup.jpg.webp" },
-  { id: 48, name: "Big Boy Monkey",    price: "₼95", category: "heykel",     image: "images/BIg Boy Monkey .jpg.webp" },
-  { id: 49, name: "White Aphrodite",   price: "₼317.50", category: "vazo", image: "images/Vhite Afrodit.jpg.webp" },
-  { id: 50, name: "Antique Clock",     price: "₼175", category: "heykel", image: "images/Antquie Clock.jpg.webp" },
-  { id: 51, name: "Ballerina",         price: "₼187.50", category: "heykel", image: "images/Ballerina.jpg.webp" },
-  { id: 52, name: "Bermuda Clock",     price: "₼150", category: "heykel", image: "images/Bermuda Clock.jpg.webp" },
-  { id: 53, name: "Black Night E(b)",  price: "₼75", category: "vazo", image: "images/Black Night E(b).jpg.webp" },
+  { id: 1, name: "Home", price: "₼120", category: "buket", image: "images/Home.jpg.webp" },
+  { id: 2, name: "Lily World", price: "₼150", category: "buket", image: "images/Lily World.jpg.webp" },
+  { id: 3, name: "Soft Life", price: "₼230", category: "buket", image: "images/Soft Life.jpg.webp" },
+  { id: 4, name: "Paeony Utopia", price: "₼510", category: "buket", image: "images/Paeony Utopia.webp" },
+  { id: 5, name: "Red Box", price: "₼350", category: "kompozisiya", image: "images/Red Box.jpg.webp" },
+  { id: 6, name: "Time to Fall", price: "₼265", category: "kompozisiya", image: "images/Time to Fall.webp" },
+  { id: 7, name: "Bouquet", price: "₼90", category: "buket", image: "images/Bouquet 002.webp" },
+  { id: 8, name: "Electric Silver", price: "₼135", category: "buket", image: "images/Electric Silver.jpg.webp" },
+  { id: 9, name: "Far Away", price: "₼190", category: "kompozisiya", image: "images/Far Away.jpg.webp" },
+  { id: 10, name: "Just Happy", price: "₼180", category: "buket", image: "images/Just Happy.jpg.webp" },
+  { id: 11, name: "Pink Wave", price: "₼210", category: "kompozisiya", image: "images/Pink Wave.jpg.webp" },
+  { id: 12, name: "Silver Light", price: "₼170", category: "buket", image: "images/Silver Light.jpg.webp" },
+  { id: 13, name: "Yellow Love", price: "₼130", category: "kompozisiya", image: "images/Yellow Love.jpg.webp" },
+  { id: 14, name: "Mix Bouquet", price: "₼350", category: "buket", image: "images/Mix Bouquet.webp" },
+  { id: 15, name: "Jasmin", price: "₼70", category: "buket", image: "images/Jasmin.webp" },
+  { id: 16, name: "Jasmin Wave", price: "₼200", category: "buket", image: "images/Jasmin Wave.webp" },
+  { id: 17, name: "Yellow Dance", price: "₼130", category: "buket", image: "images/130 fdf.jpg.webp" },
+  { id: 18, name: "Charm", price: "₼140", category: "kompozisiya", image: "images/Charm.jpg.webp" },
+  { id: 19, name: "Green Confused", price: "₼250", category: "kompozisiya", image: "images/Green Confused.jpg.webp" },
+  { id: 20, name: "Lonely", price: "₼120", category: "buket", image: "images/Lonely.webp" },
+  { id: 21, name: "Invesible", price: "₼115", category: "buket", image: "images/Invesible.jpg.webp" },
+  { id: 22, name: "Pink Dance", price: "₼170", category: "buket", image: "images/Pink dance.webp" },
+  { id: 23, name: "Lucky", price: "₼120", category: "kompozisiya", image: "images/Lucky.jpg.webp" },
+  { id: 24, name: "Memories", price: "₼100", category: "buket", image: "images/Memories.jpg.webp" },
+  { id: 25, name: "Purple Moon", price: "₼80", category: "buket", image: "images/Purple Moon.jpg.webp" },
+  { id: 26, name: "Silent", price: "₼200", category: "kompozisiya", image: "images/Silent.webp" },
+  { id: 27, name: "Aveline", price: "₼160", category: "buket", image: "images/Aveline.jpg.webp" },
+  { id: 28, name: "Rise", price: "₼100", category: "buket", image: "images/Rise.jpg.webp" },
+  { id: 29, name: "Saturn", price: "₼195", category: "buket", image: "images/Saturn.jpg.webp" },
+  { id: 30, name: "Red Dream", price: "₼90", category: "buket", image: "images/Red Dream.webp" },
+  { id: 31, name: "Soul", price: "₼85", category: "buket", image: "images/Soul.jpg.webp" },
+  { id: 32, name: "Pink Souls", price: "₼155", category: "buket", image: "images/Pink Souls.jpg.webp" },
+  { id: 33, name: "Story", price: "₼145", category: "buket", image: "images/Story.jpg.webp" },
+  { id: 34, name: "Time", price: "₼90", category: "buket", image: "images/Time.jpg.webp" },
+  { id: 35, name: "True Love", price: "₼190", category: "kompozisiya", image: "images/True Love.jpg.webp" },
+  { id: 36, name: "White Life", price: "₼120", category: "gelin-buketleri", image: "images/White Life.jpg.webp" },
+  { id: 37, name: "Yellow Lily", price: "₼100", category: "buket", image: "images/Yellow Lily.jpg.webp" },
+  { id: 38, name: "Venera Statue", price: "₼812.50", category: "heykel", image: "images/Venera Statue.jpg.webp" },
+  { id: 39, name: "Twin Deers E", price: "₼197.50", category: "heykel", image: "images/Twin Deers E .jpg.webp" },
+  { id: 40, name: "Monkey Musician", price: "₼125", category: "heykel", image: "images/Monkey Musician .jpg.webp" },
+  { id: 41, name: "Last Dance E", price: "₼162.50", category: "heykel", image: "images/Last Dance E.jpg.webp" },
+  { id: 42, name: "Iron Orbit Clock E", price: "₼222.5", category: "heykel", image: "images/Iron Orbit Clock E .jpg.webp" },
+  { id: 43, name: "India Lady Tiger", price: "₼107.50", category: "heykel", image: "images/India Lady Tiger .jpg.webp" },
+  { id: 44, name: "Egypt Panthera", price: "₼100", category: "heykel", image: "images/Egypt Panthera .jpg.webp" },
+  { id: 45, name: "Ebru Panthera", price: "₼200", category: "heykel", image: "images/Ebru Panthera.jpg.webp" },
+  { id: 46, name: "Dancing Human E", price: "₼247.50", category: "heykel", image: "images/Dancing Human E.jpg.webp" },
+  { id: 47, name: "Dou Neon Pup", price: "₼197.50", category: "heykel", image: "images/Big Neon Pup.jpg.webp" },
+  { id: 48, name: "Big Boy Monkey", price: "₼95", category: "heykel", image: "images/BIg Boy Monkey .jpg.webp" },
+  { id: 49, name: "White Aphrodite", price: "₼317.50", category: "vazo", image: "images/Vhite Afrodit.jpg.webp" },
+  { id: 50, name: "Antique Clock", price: "₼175", category: "heykel", image: "images/Antquie Clock.jpg.webp" },
+  { id: 51, name: "Ballerina", price: "₼187.50", category: "heykel", image: "images/Ballerina.jpg.webp" },
+  { id: 52, name: "Bermuda Clock", price: "₼150", category: "heykel", image: "images/Bermuda Clock.jpg.webp" },
+  { id: 53, name: "Black Night E(b)", price: "₼75", category: "vazo", image: "images/Black Night E(b).jpg.webp" },
   { id: 54, name: "Black Night Mini E(v)", price: "₼55", category: "vazo", image: "images/Black Night Mini E(v).jpg.webp" },
   { id: 55, name: "Black Night Mini E", price: "₼55", category: "vazo", image: "images/Black Night Mini E.jpg.webp" },
-  { id: 56, name: "Blue Fire Vase (01)",price: "₼150", category: "vazo", image: "images/Blue Fire Vase(01).jpg.webp" },
-  { id: 57, name: "Blue Fire Vision",   price: "₼187.50", category: "vazo", image: "images/Blue Fire Vision.jpg.webp" },
+  { id: 56, name: "Blue Fire Vase (01)", price: "₼150", category: "vazo", image: "images/Blue Fire Vase(01).jpg.webp" },
+  { id: 57, name: "Blue Fire Vision", price: "₼187.50", category: "vazo", image: "images/Blue Fire Vision.jpg.webp" },
   { id: 58, name: "Blue Fire", price: "₼150", category: "vazo", image: "images/Blue Fire.jpg.webp" },
-  { id: 59, name: "Colm Clock",price: "₼500", category: "saat", image: "images/Colm Clock.jpg.webp" },
-  { id: 60, name: "Cubic Man E",price: "₼100", category: "heykel", image: "images/Cubic Man E.jpg.webp" },
-  { id: 61, name: "Double Minaret Clock",price: "₼575", category: "heykel", image: "images/Double Minaret Clock.jpg.webp" },
+  { id: 59, name: "Colm Clock", price: "₼500", category: "saat", image: "images/Colm Clock.jpg.webp" },
+  { id: 60, name: "Cubic Man E", price: "₼100", category: "heykel", image: "images/Cubic Man E.jpg.webp" },
+  { id: 61, name: "Double Minaret Clock", price: "₼575", category: "heykel", image: "images/Double Minaret Clock.jpg.webp" },
   { id: 62, name: "Drop Vase", price: "₼275", category: "vazo", image: "images/Drop Vase.jpg.webp" },
-  { id: 63, name: "Earth Time",price: "₼97.5", category: "heykel", image: "images/Earth Time.jpg.webp" },
+  { id: 63, name: "Earth Time", price: "₼97.5", category: "heykel", image: "images/Earth Time.jpg.webp" },
   { id: 64, name: "Elephant's bone Vase", price: "₼300", category: "vazo", image: "images/Elephant`s bone Vase.jpg.webp" },
-  { id: 65, name: "Gold At Night E(b)",   price: "₼67.50", category: "vazo", image: "images/Gold At Night E(b).jpg.webp" },
+  { id: 65, name: "Gold At Night E(b)", price: "₼67.50", category: "vazo", image: "images/Gold At Night E(b).jpg.webp" },
   { id: 66, name: "Gold Ivy Vase(01)", price: "₼150", category: "vazo", image: "images/Gold lvy Vase(01).jpg.webp" },
-  { id: 67, name: "Gold Woman",price: "₼300", category: "heykel", image: "images/Gold Voman.jpg.webp" },
-  { id: 68, name: "Horse Head",price: "₼142.50", category: "heykel", image: "images/Horse Head.jpg.webp" },
+  { id: 67, name: "Gold Woman", price: "₼300", category: "heykel", image: "images/Gold Voman.jpg.webp" },
+  { id: 68, name: "Horse Head", price: "₼142.50", category: "heykel", image: "images/Horse Head.jpg.webp" },
   { id: 69, name: "Indian Double Elephant", price: "₼300", category: "heykel", image: "images/İndian Double Elephant.jpg.webp" },
   { id: 70, name: "Iron Time E", price: "₼110", category: "heykel", image: "images/İron Time E.jpg.webp" },
   { id: 71, name: "Japanese Flower Vase", price: "₼175", category: "vazo", image: "images/Japanse Flover Vase.jpg.webp" },
@@ -202,15 +202,31 @@ const flowers = [
   { id: 197, name: "Mix Tulip Bouquet", price: "₼90", category: "buket", image: "images/Mix Tulip Bouquet.jpg.webp" },
   { id: 198, name: "Myth", price: "₼55", category: "buket", image: "images/Myth.jpg.webp" },
   { id: 199, name: "Rivulet", price: "₼120", category: "buket", image: "images/Rivulet.jpg.webp" },
-  { id: 200, name: "Valea", price: "₼150", category: "buket", image: "images/Valea.jpg.webp" },
+  { id: 200, name: "Valea", price: "₼150", category: "kompozisiya", image: "images/Valea.jpg.webp" },
+  { id: 201, name: "Aura No. 01", price: "₼230", category: "buket", image: "images/Aura No. 01.jpg.webp" },
+  { id: 202, name: "Selene", price: "₼200", category: "kompozisiya", image: "images/Selene.jpg.webp" },
+  { id: 203, name: "Pink Hype", price: "₼150", category: "buket", image: "images/Pink Hype.jpg.webp" },
+  { id: 204, name: "Look", price: "₼160", category: "buket", image: "images/Look.jpg.webp" },
+  { id: 205, name: "Pink Dream", price: "₼150", category: "buket", image: "images/Pink Dream.jpg.webp" },
+  { id: 206, name: "Harmony", price: "₼100", category: "buket", image: "images/Harmony.jpg.webp" },
+  { id: 207, name: "Bloom No. 01", price: "₼260", category: "buket", image: "images/Bloom No. 01.jpg.webp" },
+  { id: 208, name: "Bouquet No. 02", price: "₼250", category: "buket", image: "images/Bouquet No.02.jpg.webp" },
+  { id: 209, name: "Hope", price: "₼160", category: "buket", image: "images/Hope.jpg.webp" },
+  { id: 210, name: "Aura No. 03", price: "₼160", category: "buket", image: "images/Aura No. 03.jpg.webp" },
+  { id: 211, name: "Madame", price: "₼200", category: "buket", image: "images/Madame.jpg.webp" },
+  { id: 212, name: "Muse No.02", price: "₼90", category: "buket", image: "images/Muse No.02.jpg.webp" },
+  { id: 213, name: "Astral", price: "₼225", category: "buket", image: "images/Astral .jpg.webp" },
+  { id: 214, name: "Flash", price: "₼190", category: "buket", image: "images/Flash.jpg.webp" },
+  { id: 215, name: "Her", price: "₼130", category: "buket", image: "images/Her.jpg.webp" },
+  { id: 216, name: "Last Night", price: "₼130", category: "buket", image: "images/Last Night.jpg.webp" },
 ];
 
 const categories = [
-  { key: "buket",           label: "Buketlər",       img: "images/Buketlər.webp" },
-  { key: "kompozisiya",     label: "Kompozisiyalar",  img: "images/Kompozisiyalar.webp" },
+  { key: "buket", label: "Buketlər", img: "images/Buketlər.webp" },
+  { key: "kompozisiya", label: "Kompozisiyalar", img: "images/Kompozisiyalar.webp" },
   { key: "gelin-buketleri", label: "Gəlin buketləri", img: "images/Gəlin buketləri.webp" },
-  { key: "vazo",            label: "Vazolar",         img: "images/Vazalar.webp" },
-  { key: "heykel",          label: "Heykəllər",       img: "images/Heykəl.webp" },
+  { key: "vazo", label: "Vazolar", img: "images/Vazalar.webp" },
+  { key: "heykel", label: "Heykəllər", img: "images/Heykəl.webp" },
 ];
 
 export default function App() {
@@ -218,29 +234,29 @@ export default function App() {
   const [modalSrc, setModalSrc] = useState(null);
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
-  const [sortOrder, setSortOrder] = useState("");
+  const [sortOrder, setSortOrder] = useState("asc");
   const getPriceNumber = (price) => {
-  return Number(price.replace("₼", "").replace(",", "."));
-};
+    return Number(price.replace("₼", "").replace(",", "."));
+  };
   const filtered = flowers.filter((f) => {
-  const price = getPriceNumber(f.price);
+    const price = getPriceNumber(f.price);
 
-  const categoryMatch =
-    !activeCategory || f.category === activeCategory;
+    const categoryMatch =
+      !activeCategory || f.category === activeCategory;
 
-  const minMatch =
-    !minPrice || price >= Number(minPrice);
+    const minMatch =
+      !minPrice || price >= Number(minPrice);
 
-  const maxMatch =
-    !maxPrice || price <= Number(maxPrice);
-  
-  return categoryMatch && minMatch && maxMatch;
-});
-if (sortOrder === "asc") {
-  filtered.sort((a, b) => getPriceNumber(a.price) - getPriceNumber(b.price));
-} else if (sortOrder === "desc") {
-  filtered.sort((a, b) => getPriceNumber(b.price) - getPriceNumber(a.price));
-}
+    const maxMatch =
+      !maxPrice || price <= Number(maxPrice);
+
+    return categoryMatch && minMatch && maxMatch;
+  });
+  if (sortOrder === "asc") {
+    filtered.sort((a, b) => getPriceNumber(a.price) - getPriceNumber(b.price));
+  } else if (sortOrder === "desc") {
+    filtered.sort((a, b) => getPriceNumber(b.price) - getPriceNumber(a.price));
+  }
 
   const handleCategoryClick = useCallback((key) => {
     setActiveCategory(key);
@@ -277,9 +293,9 @@ if (sortOrder === "asc") {
       <section className="section" id="catalog">
         <div className="container">
           <div className="filter-buttons">
-            
+
             <div className="category-grid">
-            
+
               {categories.map(cat => (
                 <div
                   key={cat.key}
@@ -290,41 +306,41 @@ if (sortOrder === "asc") {
                   <img src={cat.img} alt={cat.label} loading="lazy" decoding="async" />
                 </div>
               ))}
-              
+
             </div>
-             {}
-<div className="filter-row">
+            { }
+            <div className="filter-row">
 
-  {}
-  <div className="price-filter">
-    <input
-      type="number"
-      placeholder="Min qiymət"
-      value={minPrice}
-      onChange={(e) => setMinPrice(e.target.value)}
-    />
-    <span className="price-separator"></span>
-    <input
-      type="number"
-      placeholder="Max qiymət"
-      value={maxPrice}
-      onChange={(e) => setMaxPrice(e.target.value)}
-    />
-  </div>
+              { }
+              <div className="price-filter">
+                <input
+                  type="number"
+                  placeholder="Min qiymət"
+                  value={minPrice}
+                  onChange={(e) => setMinPrice(e.target.value)}
+                />
+                <span className="price-separator"></span>
+                <input
+                  type="number"
+                  placeholder="Max qiymət"
+                  value={maxPrice}
+                  onChange={(e) => setMaxPrice(e.target.value)}
+                />
+              </div>
 
-  {}
-  <div className="sort-filter-box">
-    <select 
-      className="sort-select"
-      value={sortOrder} 
-      onChange={(e) => setSortOrder(e.target.value)}
-    >
-      <option value="">Sıralama</option>
-      <option value="asc">Qiymət: Azdan çoxa</option>
-      <option value="desc">Qiymət: Çoxdan aza</option>
-    </select>
-  </div>
-</div>
+              { }
+              <div className="sort-filter-box">
+                <select
+                  className="sort-select"
+                  value={sortOrder}
+                  onChange={(e) => setSortOrder(e.target.value)}
+                >
+                  <option value="">Sıralama</option>
+                  <option value="asc">Qiymət: Azdan çoxa</option>
+                  <option value="desc">Qiymət: Çoxdan aza</option>
+                </select>
+              </div>
+            </div>
           </div>
 
           <div className="section-title" />
@@ -352,42 +368,40 @@ if (sortOrder === "asc") {
           </div>
         </div>
       </section>
-
       {/* FOOTER */}
       <footer id="contact">
         <div className="container">
           <div className="footer-content">
             <div className="footer-box">
               <h3>Panthera</h3>
-              <p>Panthera, çiçək və heykəl sənətini birləşdirən unikal bir mağazadır. 
+              <p>Panthera, çiçək və heykəl sənətini birləşdirən unikal bir mağazadır.
                 Müştərilərimizə ən gözəl buketlər, kompozisiyalar və heykəllərlə xidmət göstəririk.
-                 Hər bir məhsulumuz sevgi və diqqətlə hazırlanır, xüsusi günlərinizi daha da unudulmaz etmək üçün.</p>
+                Hər bir məhsulumuz sevgi və diqqətlə hazırlanır, xüsusi günlərinizi daha da unudulmaz etmək üçün.</p>
             </div>
             <div className="footer-box">
               <h3>Əlaqə</h3>
               <p>+994 51 419 11 66</p>
               <p>pantheraflowers@gmail.com</p>
- <p>
-  <a
-    href="https://www.instagram.com/panthera.floralstudio"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <FaInstagram className="social-icon" />
-    {" "}panthera.floralstudio
-  </a>
-</p>
-
-<p>
-  <a
-    href="https://www.instagram.com/panthera.souvenir"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <FaInstagram className="social-icon" />
-    {" "}panthera.souvenir
-  </a>
-</p>
+              <p>
+                <a
+                  href="https://www.instagram.com/panthera.floralstudio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram className="social-icon" />
+                  {" "}panthera.floralstudio
+                </a>
+              </p>
+              <p>
+                <a
+                  href="https://www.instagram.com/panthera.souvenir"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram className="social-icon" />
+                  {" "}panthera.souvenir
+                </a>
+              </p>
               <p>Bakı, Azərbaycan</p>
             </div>
             <div className="footer-box">
@@ -401,29 +415,22 @@ if (sortOrder === "asc") {
           </div>
         </div>
       </footer>
-    {modalSrc && (() => {
-  const selectedFlower = flowers.find(f => f.image === modalSrc);
-  
-  // 1. Məlumatları təhlükəsiz şəkildə hazırlayırıq
-  const flowerName = selectedFlower ? selectedFlower.name : "Kataloq məhsulu";
-  const flowerPrice = selectedFlower ? selectedFlower.price : "";
-  const imageUrl = selectedFlower ? `${window.location.origin}/${selectedFlower.image}` : "";
-
-  // 2. Mesaj mətnini təmiz string formatına salırıq
-  const messageText = `Salam! Panthera kataloqundan bu məhsulla maraqlanıram:\n\nMəhsul: ${flowerName}\nQiymət: ${flowerPrice}\nLink: ${imageUrl}`;
-
-  // 3. BÜTÜN mesajı encode edirik ki, boşluqlar və simvollar linki qırmasın
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=994558739416&text=${encodeURIComponent(messageText)}`;
+      {modalSrc && (() => {
+        const selectedFlower = flowers.find(f => f.image === modalSrc);
+        const flowerName = selectedFlower ? selectedFlower.name : "Kataloq məhsulu";
+        const flowerPrice = selectedFlower ? selectedFlower.price : "";
+        const imageUrl = selectedFlower ? `${window.location.origin}/${selectedFlower.image}` : "";
+        const messageText = `Salam! Panthera kataloqundan bu məhsulla maraqlanıram:\n\nMəhsul: ${flowerName}\nQiymət: ${flowerPrice}\nLink: ${imageUrl}`;
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=994558739416&text=${encodeURIComponent(messageText)}`;
         return (
           <div className="image-modal active" onClick={closeModal}>
             <div className="modal-content-wrapper" onClick={(e) => e.stopPropagation()}>
               <img src={modalSrc} alt="" loading="lazy" decoding="async" />
-              
               {/* WhatsApp ilə Sifariş Et Düyməsi */}
-              <a 
-                href={whatsappUrl} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="whatsapp-order-btn"
               >
                 WhatsApp ilə Sifariş Et
