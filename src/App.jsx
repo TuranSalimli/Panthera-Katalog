@@ -128,7 +128,7 @@ const flowers = [
   { id: 123, name: "Pure", price: "₼200", category: "buket", image: "images/Pure.jpg.webp" },
   { id: 124, name: "Red Line", price: "₼400", category: "kompozisiya", image: "images/Red Line.jpg.webp" },
   { id: 125, name: "Roses Luciana", price: "₼600", category: "buket", image: "images/Roses Luciana.jpg.webp" },
-  { id: 126, name: "Pink Box", price: "₼550", category: "kompozisiya", image: "images/Pink Box.jpg.webp" },
+  { id: 126, name: "Pink Box", price: "₼300", category: "kompozisiya", image: "images/Pink Box.jpg.webp" },
   { id: 127, name: "Pink O'hara", price: "₼300", category: "buket", image: "images/Pink O'hara.jpg.webp" },
   { id: 128, name: "Morning Light", price: "₼300", category: "kompozisiya", image: "images/Morning Light.jpg.webp" },
   { id: 129, name: "Lavender Dream", price: "₼200", category: "buket", image: "images/Lavender Dream.jpg.webp" },
@@ -207,7 +207,7 @@ const flowers = [
   { id: 202, name: "Selene", price: "₼200", category: "kompozisiya", image: "images/Selene.jpg.webp" },
   { id: 203, name: "Pink Hype", price: "₼150", category: "buket", image: "images/Pink Hype.jpg.webp" },
   { id: 204, name: "Look", price: "₼160", category: "buket", image: "images/Look.jpg.webp" },
-  { id: 205, name: "Pink Dream", price: "₼150", category: "buket", image: "images/Pink Dream.jpg.webp" },
+  { id: 205, name: "Pink Dream", price: "₼150", category: "kompozisiya", image: "images/Pink Dream.jpg.webp" },
   { id: 206, name: "Harmony", price: "₼100", category: "buket", image: "images/Harmony.jpg.webp" },
   { id: 207, name: "Bloom No. 01", price: "₼260", category: "buket", image: "images/Bloom No. 01.jpg.webp" },
   { id: 208, name: "Bouquet No. 02", price: "₼250", category: "buket", image: "images/Bouquet No.02.jpg.webp" },
@@ -220,7 +220,6 @@ const flowers = [
   { id: 215, name: "Her", price: "₼130", category: "buket", image: "images/Her.jpg.webp" },
   { id: 216, name: "Last Night", price: "₼130", category: "buket", image: "images/Last Night.jpg.webp" },
 ];
-
 const categories = [
   { key: "buket", label: "Buketlər", img: "images/Buketlər.webp" },
   { key: "kompozisiya", label: "Kompozisiyalar", img: "images/Kompozisiyalar.webp" },
@@ -228,7 +227,6 @@ const categories = [
   { key: "vazo", label: "Vazolar", img: "images/Vazalar.webp" },
   { key: "heykel", label: "Heykəllər", img: "images/Heykəl.webp" },
 ];
-
 export default function App() {
   const [activeCategory, setActiveCategory] = useState(null);
   const [modalSrc, setModalSrc] = useState(null);
