@@ -446,7 +446,7 @@ export default function App() {
         const flowerPrice = selectedFlower ? selectedFlower.price : "";
         const imageUrl = selectedFlower ? `${window.location.origin}/${selectedFlower.image}` : "";
         const messageText = `Salam! Panthera kataloqundan bu məhsulla maraqlanıram:\n\nMəhsul: ${flowerName}\nQiymət: ${flowerPrice}\nLink: ${imageUrl}`;
-        const whatsappUrl = `https://api.whatsapp.com/send?phone=994558739416&text=${encodeURIComponent(messageText)}`;
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=994773040303&text=${encodeURIComponent(messageText)}`;
         return (
           <div className="image-modal active" onClick={closeModal}>
             <div className="modal-content-wrapper" onClick={(e) => e.stopPropagation()}>
