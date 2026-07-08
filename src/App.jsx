@@ -307,12 +307,6 @@ export default function App() {
 
   return (
     <>
-      {/* HERO */}
-      <section className="hero" id="home">
-        <div className="container hero-content">
-          <a href="#catalog" className="scroll-down">↓</a>
-        </div>
-      </section>
 
       {/* CATALOG */}
       <section className="section" id="catalog">
@@ -440,7 +434,7 @@ export default function App() {
           </div>
         </div>
       </footer>
-      {modalSrc && (() => {
+       {modalSrc && (() => {
         const selectedFlower = flowers.find(f => f.image === modalSrc);
         const flowerName = selectedFlower ? selectedFlower.name : "Kataloq məhsulu";
         const flowerPrice = selectedFlower ? selectedFlower.price : "";

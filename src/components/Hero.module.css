@@ -1,11 +1,3 @@
-.hero {
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background: url('/images/IMG_4051.PNG') center / cover no-repeat;
-}
 
 .heroContent {
   max-width: 700px;
@@ -46,10 +38,4 @@
 }
 
 @media (max-width: 768px) {
-  .hero {
-    background: url('/images/IMG_4051.PNG') center / contain no-repeat;
-    background-color: var(--cream);
-    justify-content: center;
-    padding: 20px;
-  }
 }
