@@ -33,7 +33,6 @@ const flowers = [
   { id: 28, name: "Rise", price: "₼100", category: "buket", image: "images/Rise.jpg.webp" },
   { id: 29, name: "Saturn", price: "₼195", category: "buket", image: "images/Saturn.jpg.webp" },
   { id: 30, name: "Red Dream", price: "₼90", category: "buket", image: "images/Red Dream.webp" },
-  { id: 31, name: "Soul", price: "₼85", category: "buket", image: "images/Soul.jpg.webp" },
   { id: 32, name: "Pink Souls", price: "₼155", category: "buket", image: "images/Pink Souls.jpg.webp" },
   { id: 33, name: "Story", price: "₼145", category: "buket", image: "images/Story.jpg.webp" },
   { id: 34, name: "Time", price: "₼90", category: "buket", image: "images/Time.jpg.webp" },
