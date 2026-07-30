@@ -275,6 +275,27 @@ const flowers = [
   { id: 274, name: "Mono Juliette", price: "₼150", category: "buket", image: "images/150 Mono Juliette  .jpg.jpeg"},
   { id: 275, name: "Today", price: "₼160", category: "buket", image: "images/160  Today.jpg.jpeg"},
   
+  { id: 276, name: "Colm Clock", price: "₼500", category: "heykel", image: "images/Colm Clock.jpg (1).jpeg" },
+  { id: 277, name: "Qraf Toucan", price: "₼100", category: "heykel", image: "images/Qraf Toucan.jpeg" },
+  { id: 278, name: "Ivory Clock", price: "₼325", category: "saat", image: "images/Ivory Clock.jpeg.webp" },
+  { id: 279, name: "Qraf Monkey", price: "₼40", category: "heykel", image: "images/Qraf Monkey.jpeg" },
+  { id: 280, name: "Owl Family", price: "₼40", category: "heykel", image: "images/Owl Family.jpeg" },
+  { id: 281, name: "Antique Pyramid Vase", price: "₼110", category: "vazo", image: "images/Antique Pyramid Vase.png" },
+  { id: 282, name: "Joker E", price: "₼447.5", category: "heykel", image: "images/Joker E.jpeg" },
+  { id: 283, name: "Modern Orange Elephant E", price: "₼90", category: "heykel", image: "images/Modern Orange Elephant E.jpeg" },
+  { id: 284, name: "HallyGueen", price: "₼222.5", category: "heykel", image: "images/HallyGueen.jpeg" },
+  { id: 285, name: "Triple Giraffe Family", price: "₼150", category: "heykel", image: "images/Triple Giraffe Family.jpeg" },
+
+  { id: 286, name: "Pink Rabbit", price: "₼175", category: "heykel", image: "images/Pink Rabbit.jpeg" },
+  { id: 287, name: "Red Lady", price: "₼675", category: "heykel", image: "images/Red Lady.jpeg" },
+  { id: 288, name: "Gitara", price: "₼500", category: "heykel", image: "images/Gitara.jpeg" },
+  { id: 289, name: "Natural Coral E", price: "₼85", category: "heykel", image: "images/Natural Coral E.jpeg" },
+  { id: 290, name: "Big Eiffel Tower E", price: "₼110", category: "heykel", image: "images/Big Eiffel Tower E.jpeg" },
+  { id: 291, name: "Peral Parrot E", price: "₼72.5", category: "heykel", image: "images/AK3A2455.jpg.jpeg" },
+  { id: 292, name: "Flower Collection Wide Vase E", price: "₼147.5", category: "vazo", image: "images/Flower Collection Wide Vase E.jpeg" },
+  { id: 293, name: "Magic Vase", price: "₼92", category: "vazo", image: "images/Magic Vase.jpeg" },
+  { id: 294, name: "Flower Collection Vase E", price: "₼172.5", category: "vazo", image: "images/Flower Collection Vase E.jpeg" }
+  
 ];
 const categories = [
   { key: "buket", label: "Buketlər", img: "images/Buketlər.webp" },
@@ -341,7 +362,7 @@ export default function App() {
       <section className="section" id="catalog">
         <div className="container">
           <div className="filter-buttons">
-
+            
             <div className="category-grid">
 
               {categories.map(cat => (
