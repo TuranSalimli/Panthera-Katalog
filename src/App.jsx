@@ -274,7 +274,6 @@ const flowers = [
   { id: 273, name: "Blue smoke", price: "₼150", category: "buket", image: "images/150 Blue smoke.jpg.jpeg"},
   { id: 274, name: "Mono Juliette", price: "₼150", category: "buket", image: "images/150 Mono Juliette  .jpg.jpeg"},
   { id: 275, name: "Today", price: "₼160", category: "buket", image: "images/160  Today.jpg.jpeg"},
-  
   { id: 276, name: "Colm Clock", price: "₼500", category: "heykel", image: "images/Colm Clock.jpg (1).jpeg" },
   { id: 277, name: "Qraf Toucan", price: "₼100", category: "heykel", image: "images/Qraf Toucan.jpeg" },
   { id: 278, name: "Ivory Clock", price: "₼325", category: "saat", image: "images/Ivory Clock.jpeg.webp" },
@@ -285,7 +284,6 @@ const flowers = [
   { id: 283, name: "Modern Orange Elephant E", price: "₼90", category: "heykel", image: "images/Modern Orange Elephant E.jpeg" },
   { id: 284, name: "HallyGueen", price: "₼222.5", category: "heykel", image: "images/HallyGueen.jpeg" },
   { id: 285, name: "Triple Giraffe Family", price: "₼150", category: "heykel", image: "images/Triple Giraffe Family.jpeg" },
-
   { id: 286, name: "Pink Rabbit", price: "₼175", category: "heykel", image: "images/Pink Rabbit.jpeg" },
   { id: 287, name: "Red Lady", price: "₼675", category: "heykel", image: "images/Red Lady.jpeg" },
   { id: 288, name: "Gitara", price: "₼500", category: "heykel", image: "images/Gitara.jpeg" },
@@ -294,8 +292,18 @@ const flowers = [
   { id: 291, name: "Peral Parrot E", price: "₼72.5", category: "heykel", image: "images/AK3A2455.jpg.jpeg" },
   { id: 292, name: "Flower Collection Wide Vase E", price: "₼147.5", category: "vazo", image: "images/Flower Collection Wide Vase E.jpeg" },
   { id: 293, name: "Magic Vase", price: "₼92", category: "vazo", image: "images/Magic Vase.jpeg" },
-  { id: 294, name: "Flower Collection Vase E", price: "₼172.5", category: "vazo", image: "images/Flower Collection Vase E.jpeg" }
-  
+  { id: 294, name: "Flower Collection Vase E", price: "₼172.5", category: "vazo", image: "images/Flower Collection Vase E.jpeg" },
+  { id: 295, name: "Grace", price: "₼95", category: "gelin-buketleri", image: "images/95 Grace .jpg.jpeg" },
+  { id: 296, name: "Forever Bloom", price: "₼120", category: "gelin-buketleri", image: "images/120 Forever Bloom.jpg.jpeg" },
+  { id: 297, name: "Amour", price: "₼120", category: "gelin-buketleri", image: "images/120 Amour.jpg.jpeg" },
+  { id: 298, name: "Promise", price: "₼120", category: "gelin-buketleri", image: "images/120 Promise jpg.jpg.jpeg" },
+  { id: 299, name: "Beloved", price: "₼130", category: "gelin-buketleri", image: "images/130 Beloved.jpg.jpeg" },
+  { id: 300, name: "Chérie", price: "₼115", category: "gelin-buketleri", image: "images/115 Chérie.jpg.jpeg" },
+  { id: 301, name: "Éclat", price: "₼110", category: "gelin-buketleri", image: "images/110 Éclat .jpg.jpeg" },
+  { id: 302, name: "Moonlight", price: "₼135", category: "gelin-buketleri", image: "images/135 Moonlight.jpg.jpeg" },
+  { id: 303, name: "Jardin", price: "₼130", category: "gelin-buketleri", image: "images/130 Jardin.jpg.jpeg" },
+  { id: 304, name: "Timeless", price: "₼100", category: "gelin-buketleri", image: "images/100 Timeless .jpg.jpeg" },
+  { id: 305, name: "Endless", price: "₼90", category: "gelin-buketleri", image: "images/90 Endless .jpg.jpeg" }
 ];
 const categories = [
   { key: "buket", label: "Buketlər", img: "images/Buketlər.webp" },
@@ -303,6 +311,7 @@ const categories = [
   { key: "gelin-buketleri", label: "Gəlin buketləri", img: "images/Gəlin buketləri.webp" },
   { key: "vazo", label: "Vazolar", img: "images/Vazalar.webp" },
   { key: "heykel", label: "Heykəllər", img: "images/Heykəl.webp" },
+   { key: "dekor", label: "Dekorllar", img: "images/Site cover.jpg.jpeg" }, 
 ];
 export default function App() {
   const [activeCategory, setActiveCategory] = useState(null);
