@@ -303,7 +303,38 @@ const flowers = [
   { id: 302, name: "Moonlight", price: "₼135", category: "gelin-buketleri", image: "images/135 Moonlight.jpg.jpeg" },
   { id: 303, name: "Jardin", price: "₼130", category: "gelin-buketleri", image: "images/130 Jardin.jpg.jpeg" },
   { id: 304, name: "Timeless", price: "₼100", category: "gelin-buketleri", image: "images/100 Timeless .jpg.jpeg" },
-  { id: 305, name: "Endless", price: "₼90", category: "gelin-buketleri", image: "images/90 Endless .jpg.jpeg" }
+  { id: 305, name: "Endless", price: "₼90", category: "gelin-buketleri", image: "images/90 Endless .jpg.jpeg" },
+  { id: 306, name: "Velvet", price: "₼70", category: "buket", image: "images/70 Velvet.jpg.jpeg" },
+  { id: 307, name: "Morning Dew", price: "₼90", category: "buket", image: "images/90 Morning Dew.jpg.jpeg" },
+  { id: 308, name: "Whisper", price: "₼45", category: "buket", image: "images/45 Whisper.jpg.jpeg" },
+  { id: 309, name: "Eclipse", price: "₼50", category: "buket", image: "images/50 Eclipse.jpg.jpeg" },
+  { id: 310, name: "Pearl", price: "₼40", category: "buket", image: "images/40 Pearl.jpg.jpeg" },
+  { id: 311, name: "Miracle", price: "₼40", category: "buket", image: "images/40  Miracle.jpg.jpeg" },
+  { id: 312, name: "Heart", price: "₼50", category: "buket", image: "images/50 Heart.jpg.jpeg" },
+  { id: 313, name: "Grace", price: "₼70", category: "buket", image: "images/70 Grace.jpg.jpeg" },
+  { id: 314, name: "Serenity", price: "₼40", category: "buket", image: "images/40 Serenity.jpg.jpeg" },
+  { id: 315, name: "Eden", price: "₼40", category: "buket", image: "images/40 eden.jpg.jpeg" },
+  { id: 316, name: "Petal", price: "₼90", category: "buket", image: "images/90 Petal.jpg.jpeg" },
+  { id: 317, name: "Ivory", price: "₼100", category: "buket", image: "images/100 ivory .jpg.jpeg" },
+  { id: 318, name: "Crystal", price: "₼80", category: "buket", image: "images/80 Crystal.jpg.jpeg" },
+  { id: 319, name: "Moonlight", price: "₼140", category: "buket", image: "images/140 Moonlight.jpg.jpeg" },
+  { id: 320, name: "Royal", price: "₼150", category: "buket", image: "images/150 Royal.jpg.jpeg" },
+  { id: 321, name: "Wild Bloom", price: "₼90", category: "buket", image: "images/90 Wild Bloom.jpg.jpeg" },
+  { id: 322, name: "Solstice", price: "₼100", category: "buket", image: "images/100  Solstice.jpg.jpeg" },
+  { id: 323, name: "Golden Hour", price: "₼100", category: "buket", image: "images/100 Golden Hour.jpg.jpeg" },
+  { id: 324, name: "Harmony", price: "₼145", category: "buket", image: "images/145 Harmony.jpg.jpeg" },
+  { id: 325, name: "First Light", price: "₼120", category: "qutu", image: "images/120 First Light.jpg.jpeg" },
+  { id: 326, name: "Innocence", price: "₼210", category: "buket", image: "images/210 Innocence.jpg.jpeg" },
+  { id: 327, name: "Sunrise", price: "₼100", category: "buket", image: "images/100 Sunrise.jpg.jpeg" },
+  { id: 328, name: "Opal", price: "₼50", category: "buket", image: "images/50 Opal.jpg.jpeg" },
+  { id: 329, name: "Amber", price: "₼280", category: "buket", image: "images/280 Amber.jpg.jpeg" },
+  { id: 330, name: "Faith", price: "₼60", category: "buket", image: "images/60 Faith.jpg.jpeg" },
+  { id: 331, name: "Beloved", price: "₼50", category: "buket", image: "images/50 Beloved.jpg.jpeg" },
+  { id: 332, name: "Sapphire", price: "₼80", category: "buket", image: "images/80 Sapphire .jpg.jpeg" },
+  { id: 333, name: "Secret Garden", price: "₼130", category: "buket", image: "images/130 Secret Garden.jpg.jpeg" },
+  { id: 334, name: "Desire", price: "₼145", category: "buket", image: "images/145 Desire.jpg.jpeg" },
+  { id: 335, name: "Forest Mist", price:"₼150", category: "buket", image:"images/150 Forest Mist.jpg.jpeg" },
+  { id: 336, name: "Sage", price: "₼310", category: "buket", image: "images/310 Sage .jpg.jpeg" }
 ];
 const categories = [
   { key: "buket", label: "Buketlər", img: "images/Buketlər.webp" },
@@ -335,7 +366,7 @@ export default function App() {
       !maxPrice || price <= Number(maxPrice);
 
     return categoryMatch && minMatch && maxMatch;
-  });
+  });   
   if (sortOrder === "asc") {
     filtered.sort((a, b) => getPriceNumber(a.price) - getPriceNumber(b.price));
   } else if (sortOrder === "desc") {
