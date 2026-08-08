@@ -334,7 +334,18 @@ const flowers = [
   { id: 333, name: "Secret Garden", price: "₼130", category: "buket", image: "images/130 Secret Garden.jpg.jpeg" },
   { id: 334, name: "Desire", price: "₼145", category: "buket", image: "images/145 Desire.jpg.jpeg" },
   { id: 335, name: "Forest Mist", price:"₼150", category: "buket", image:"images/150 Forest Mist.jpg.jpeg" },
-  { id: 336, name: "Sage", price: "₼310", category: "buket", image: "images/310 Sage .jpg.jpeg" }
+  { id: 336, name: "Sage", price: "₼310", category: "buket", image: "images/310 Sage .jpg.jpeg" },
+  { id: 337, name: "Purple City", price: "₼130", category: "buket", image: "images/130 Purple  City.jpg.jpeg" },
+  { id: 338, name: "Floral Dream", price: "₼215", category: "buket", image: "images/215 Floral Dream.jpg.jpeg" },
+  { id: 339, name: "Lemon Box", price: "₼130", category: "qutu", image: "images/130 Lemon Box.jpg.jpeg" },
+  { id: 340, name: "White Level", price: "₼210", category: "buket", image: "images/210 White level.jpg.jpeg" },
+  { id: 341, name: "Lily 030", price: "₼90", category: "buket", image: "images/90 Lily 030.jpg.jpeg" },
+  { id: 342, name: "Soft Romance", price: "₼150", category: "buket", image: "images/150 Soft Romance.jpg.jpeg" },
+  { id: 343, name: "Mono Giselle", price: "₼220", category: "buket", image: "images/220 Mono Giselle.jpg.jpeg" },
+  { id: 344, name: "Mix O'hara", price: "₼240", category: "buket", image: "images/240 Mix O'hara.jpg.jpeg" },
+  { id: 345, name: "Level 03", price: "₼250", category: "buket", image: "images/250 Level 03.jpg.jpeg" },
+  { id: 346, name: "Big Basket 03", price: "₼350", category: "kompozisiya", image: "images/350 Big Basket 03.jpg.jpeg" },
+  { id: 347, name: "Silent Poetry", price: "₼200", category: "buket", image: "images/200 Silent Poetry.jpg.jpeg" }
 ];
 const categories = [
   { key: "buket", label: "Buketlər", img: "images/Buketlər.webp" },
