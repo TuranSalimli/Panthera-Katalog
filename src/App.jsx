@@ -266,7 +266,7 @@ const flowers = [
   { id: 265, name: "Just Vibe", price: "₼170", category: "buket", image: "images/170 Just Vibe.jpg.jpeg" },
   { id: 266, name: "Soft Vegas", price: "₼170", category: "buket", image: "images/170 Soft Vegas.jpg.jpeg" },
   { id: 267, name: "Olive World", price: "₼220", category: "buket", image: "images/220 Olive World.jpg.jpeg" },
-  { id: 268, name: "Mono Lady", price: "₼85", category: "buket", image: "images/85 Mono Lady.jpg.jpeg" },
+  { id: 268, name: "Mono Lady", price: "₼125", category: "buket", image: "images/85 Mono Lady.jpg.jpeg" },
   { id: 269, name: "Lily Boulevard", price: "₼90", category: "buket", image: "images/90 Lily Boulevard .jpg.jpeg"},
   { id: 270, name: "Lily Story", price: "₼90", category: "buket", image: "images/90 Lily story .jpg.jpeg"},
   { id: 271, name: "Sound like", price: "₼110", category: "buket", image: "images/110 Sound like .jpg.jpeg"},
