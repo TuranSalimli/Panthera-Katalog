@@ -405,7 +405,7 @@ export default function App() {
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, []);
-
+const removeSpaces = (str) => str.replace(/\s+/g, "");
   return (
     <>
 
@@ -539,7 +539,7 @@ export default function App() {
         const selectedFlower = flowers.find(f => f.image === modalSrc);
         const flowerName = selectedFlower ? selectedFlower.name : "Kataloq məhsulu";
         const flowerPrice = selectedFlower ? selectedFlower.price : "";
-        const imageUrl = selectedFlower ? `${window.location.origin}/${selectedFlower.image}` : "";
+        const imageUrl = selectedFlower ? `${window.location.origin}/${removeSpaces(selectedFlower.image)}` : "";
         const messageText = `Salam! Panthera kataloqundan bu məhsulla maraqlanıram:\n\nMəhsul: ${flowerName}\nQiymət: ${flowerPrice}\nLink: ${imageUrl}`;
         const whatsappUrl = `https://api.whatsapp.com/send?phone=994773040303&text=${encodeURIComponent(messageText)}`;
         return (
