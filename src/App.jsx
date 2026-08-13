@@ -405,7 +405,7 @@ export default function App() {
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, []);
-const removeSpaces = (str) => str.replace(/\s+/g, "");
+
   return (
     <>
 
@@ -537,11 +537,18 @@ const removeSpaces = (str) => str.replace(/\s+/g, "");
       </footer>
        {modalSrc && (() => {
         const selectedFlower = flowers.find(f => f.image === modalSrc);
-        const flowerName = selectedFlower ? selectedFlower.name : "Kataloq məhsulu";
-        const flowerPrice = selectedFlower ? selectedFlower.price : "";
-        const imageUrl = selectedFlower ? `${window.location.origin}/${removeSpaces(selectedFlower.image)}` : "";
-        const messageText = `Salam! Panthera kataloqundan bu məhsulla maraqlanıram:\n\nMəhsul: ${flowerName}\nQiymət: ${flowerPrice}\nLink: ${imageUrl}`;
-        const whatsappUrl = `https://api.whatsapp.com/send?phone=994773040303&text=${encodeURIComponent(messageText)}`;
+const flowerName = selectedFlower ? selectedFlower.name : "Kataloq məhsulu";
+const flowerPrice = selectedFlower ? selectedFlower.price : "";
+
+// encodeURI istifadə edərək şəkil yolundakı boşluqları (%20 ilə) təhlükəsiz edirik:
+const imageUrl = selectedFlower 
+  ? `${window.location.origin}/${encodeURI(selectedFlower.image)}` 
+  : "";
+
+const messageText = `Salam! Panthera kataloqundan bu məhsulla maraqlanıram:\n\nMəhsul: ${flowerName}\nQiymət: ${flowerPrice}\nLink: ${imageUrl}`;
+
+// WhatsApp linkini də təmiz string şəklində təyin edirik:
+const whatsappUrl = `https://api.whatsapp.com/send?phone=994773040303&text=${encodeURIComponent(messageText)}`;
         return (
           <div className="image-modal active" onClick={closeModal}>
             <div className="modal-content-wrapper" onClick={(e) => e.stopPropagation()}>
