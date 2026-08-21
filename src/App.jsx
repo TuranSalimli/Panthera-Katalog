@@ -337,7 +337,7 @@ const flowers = [
   { id: 336, name: "Sage", price: "₼310", category: "buket", image: "images/310 Sage .jpg.jpeg" },
   { id: 337, name: "Purple City", price: "₼130", category: "buket", image: "images/130 Purple  City.jpg.jpeg" },
   { id: 338, name: "Floral Dream", price: "₼215", category: "buket", image: "images/215 Floral Dream.jpg.jpeg" },
-  { id: 339, name: "Lemon Box", price: "₼130", category: "qutu", image: "images/130 Lemon Box.jpg.jpeg" },
+  { id: 339, name: "Lemon Box", price: "₼130", category: "kompozisiya", image: "images/130 Lemon Box.jpg.jpeg" },
   { id: 340, name: "White Level", price: "₼210", category: "buket", image: "images/210 White level.jpg.jpeg" },
   { id: 341, name: "Lily 030", price: "₼90", category: "buket", image: "images/90 Lily 030.jpg.jpeg" },
   { id: 342, name: "Soft Romance", price: "₼150", category: "buket", image: "images/150 Soft Romance.jpg.jpeg" },
@@ -345,7 +345,19 @@ const flowers = [
   { id: 344, name: "Mix O'hara", price: "₼240", category: "buket", image: "images/240 Mix O'hara.jpg.jpeg" },
   { id: 345, name: "Level 03", price: "₼250", category: "buket", image: "images/250 Level 03.jpg.jpeg" },
   { id: 346, name: "Big Basket 03", price: "₼350", category: "kompozisiya", image: "images/350 Big Basket 03.jpg.jpeg" },
-  { id: 347, name: "Silent Poetry", price: "₼200", category: "buket", image: "images/200 Silent Poetry.jpg.jpeg" }
+  { id: 347, name: "Silent Poetry", price: "₼200", category: "buket", image: "images/200 Silent Poetry.jpg.jpeg" },
+  { id: 348, name: "Green Losing", price: "₼230", category: "kompozisiya", image: "images/230 Green Losing.jpg.jpeg" },
+  { id: 349, name: "Lovers", price: "₼280", category: "kompozisiya", image: "images/280 Lovers.jpg.jpeg" },
+  { id: 350, name: "Where You Are", price: "₼260", category: "buket", image: "images/260 Where you are.jpg.jpeg" },
+  { id: 351, name: "Night Dance", price: "₼145", category: "buket", image: "images/145 Night Dance.jpg.jpeg" },
+  { id: 352, name: "End", price: "₼270", category: "buket", image: "images/270 End.jpg.jpeg" },
+  { id: 353, name: "Istanbul", price: "₼140", category: "buket", image: "images/140 Istanbul .jpg.jpeg" },
+  { id: 354, name: "Your Eyes", price: "₼170", category: "buket", image: "images/170 Your eyes.jpg.jpeg" },
+  { id: 355, name: "Your Face", price: "₼280", category: "kompozisiya", image: "images/280 Your face.jpg.jpeg" },
+  { id: 356, name: "Flashing", price: "₼70", category: "gelin-buketleri", image: "images/70 Flashing.jpg.jpeg" },
+  { id: 357, name: "Our Last Dance", price: "₼380", category: "buket", image: "images/380 Our Last Dance.jpg.jpeg" },
+  { id: 358, name: "Green Eyes", price: "₼240", category: "buket", image: "images/240 Green Eyes .jpg.jpeg" },
+  { id: 359, name: "Wedding Peony", price: "₼150", category: "gelin-buketleri", image: "images/Wedding Peony.jpg.jpeg" }
 ];
 const categories = [
   { key: "buket", label: "Buketlər", img: "images/Buketlər.webp" },
@@ -539,15 +551,10 @@ export default function App() {
         const selectedFlower = flowers.find(f => f.image === modalSrc);
 const flowerName = selectedFlower ? selectedFlower.name : "Kataloq məhsulu";
 const flowerPrice = selectedFlower ? selectedFlower.price : "";
-
-// encodeURI istifadə edərək şəkil yolundakı boşluqları (%20 ilə) təhlükəsiz edirik:
 const imageUrl = selectedFlower 
   ? `${window.location.origin}/${encodeURI(selectedFlower.image)}` 
   : "";
-
 const messageText = `Salam! Panthera kataloqundan bu məhsulla maraqlanıram:\n\nMəhsul: ${flowerName}\nQiymət: ${flowerPrice}\nLink: ${imageUrl}`;
-
-// WhatsApp linkini də təmiz string şəklində təyin edirik:
 const whatsappUrl = `https://api.whatsapp.com/send?phone=994773040303&text=${encodeURIComponent(messageText)}`;
         return (
           <div className="image-modal active" onClick={closeModal}>
