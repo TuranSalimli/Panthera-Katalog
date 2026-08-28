@@ -9,7 +9,7 @@ const flowers = [
   { id: 4, name: "Paeony Utopia", price: "₼510", category: "buket", image: "images/Paeony Utopia.webp" },
   { id: 5, name: "Red Box", price: "₼350", category: "kompozisiya", image: "images/Red Box.jpg.webp" },
   { id: 6, name: "Time to Fall", price: "₼265", category: "kompozisiya", image: "images/Time to Fall.webp" },
-  { id: 7, name: "Bouquet", price: "₼90", category: "buket", image: "images/Bouquet 002.webp" },
+  { id: 7, name: "Bouquet", price: "₼115", category: "buket", image: "images/Bouquet 002.webp" },
   { id: 8, name: "Electric Silver", price: "₼135", category: "buket", image: "images/Electric Silver.jpg.webp" },
   { id: 9, name: "Far Away", price: "₼190", category: "kompozisiya", image: "images/Far Away.jpg.webp" },
   { id: 10, name: "Just Happy", price: "₼180", category: "buket", image: "images/Just Happy.jpg.webp" },
@@ -357,7 +357,11 @@ const flowers = [
   { id: 356, name: "Flashing", price: "₼70", category: "gelin-buketleri", image: "images/70 Flashing.jpg.jpeg" },
   { id: 357, name: "Our Last Dance", price: "₼380", category: "buket", image: "images/380 Our Last Dance.jpg.jpeg" },
   { id: 358, name: "Green Eyes", price: "₼240", category: "buket", image: "images/240 Green Eyes .jpg.jpeg" },
-  { id: 359, name: "Wedding Peony", price: "₼150", category: "gelin-buketleri", image: "images/Wedding Peony.jpg.jpeg" }
+  { id: 359, name: "Solea", price: "₼540", category: "kompozisiya", image: "images/540 SOLEA .jpg.jpeg" },
+  { id: 360, name: "Alba", price: "₼250", category: "buket", image: "images/250 ALBA .jpg.jpeg" },
+  { id: 361, name: "Noma", price: "₼250", category: "buket", image: "images/250 NOMA.jpg.jpeg" },
+  { id: 362, name: "Mira", price: "₼260", category: "gelin-buketleri", image: "images/260 MIRA.jpg.jpeg" },
+  { id: 363, name: "Aria", price: "₼580", category: "sebet", image: "images/580 ARIA .jpg.jpeg" }
 ];
 const categories = [
   { key: "buket", label: "Buketlər", img: "images/Buketlər.webp" },
