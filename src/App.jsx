@@ -307,7 +307,7 @@ const flowers = [
   { id: 306, name: "Velvet", price: "₼70", category: "buket", image: "images/70 Velvet.jpg.jpeg" },
   { id: 307, name: "Morning Dew", price: "₼90", category: "buket", image: "images/90 Morning Dew.jpg.jpeg" },
   { id: 308, name: "Whisper", price: "₼45", category: "buket", image: "images/45 Whisper.jpg.jpeg" },
-  { id: 309, name: "Eclipse", price: "₼50", category: "buket", image: "images/50 Eclipse.jpg.jpeg" },
+  { id: 309, name: "Eclipse", price: "₼55", category: "buket", image: "images/50 Eclipse.jpg.jpeg" },
   { id: 310, name: "Pearl", price: "₼40", category: "buket", image: "images/40 Pearl.jpg.jpeg" },
   { id: 311, name: "Miracle", price: "₼40", category: "buket", image: "images/40  Miracle.jpg.jpeg" },
   { id: 312, name: "Heart", price: "₼50", category: "buket", image: "images/50 Heart.jpg.jpeg" },
@@ -361,7 +361,7 @@ const flowers = [
   { id: 360, name: "Alba", price: "₼250", category: "buket", image: "images/250 ALBA .jpg.jpeg" },
   { id: 361, name: "Noma", price: "₼250", category: "buket", image: "images/250 NOMA.jpg.jpeg" },
   { id: 362, name: "Mira", price: "₼260", category: "gelin-buketleri", image: "images/260 MIRA.jpg.jpeg" },
-  { id: 363, name: "Aria", price: "₼580", category: "sebet", image: "images/580 ARIA .jpg.jpeg" }
+  { id: 363, name: "Aria", price: "₼580", category: "sebet", image: "images/580 ARIA .jpg.jpeg" },
 ];
 const categories = [
   { key: "buket", label: "Buketlər", img: "images/Buketlər.webp" },
