@@ -127,7 +127,7 @@ const flowers = [
   { id: 123, name: "Pure", price: "₼200", category: "buket", image: "images/Pure.jpg.webp" },
   { id: 124, name: "Red Line", price: "₼400", category: "kompozisiya", image: "images/Red Line.jpg.webp" },
   { id: 125, name: "Roses Luciana", price: "₼600", category: "buket", image: "images/Roses Luciana.jpg.webp" },
-  { id: 126, name: "Pink Box", price: "₼300", category: "kompozisiya", image: "images/Pink Box.jpg.webp" },
+  { id: 126, name: "Pink Box", price: "₼550", category: "kompozisiya", image: "images/Pink Box.jpg.webp" },
   { id: 127, name: "Pink O'hara", price: "₼300", category: "buket", image: "images/Pink O'hara.jpg.webp" },
   { id: 128, name: "Morning Light", price: "₼300", category: "kompozisiya", image: "images/Morning Light.jpg.webp" },
   { id: 129, name: "Lavender Dream", price: "₼200", category: "buket", image: "images/Lavender Dream.jpg.webp" },
