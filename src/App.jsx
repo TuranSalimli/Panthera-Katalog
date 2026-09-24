@@ -371,7 +371,24 @@ const flowers = [
   { id: 371, name: "Plum", price: "₼55", category: "buket", image: "images/55 Plum .jpg.jpeg" },
   { id: 372, name: "Mimoza", price: "₼250", category: "buket", image: "images/250 Mimoza .jpg.jpeg" },
   { id: 373, name: "Peach Skin", price: "₼200", category: "buket", image: "images/200 Peach Skin .jpg.jpeg" },
-  { id: 374, name: "Cherry Bomb", price: "₼300", category: "buket", image: "images/300 Cherry Bomb .jpg.jpeg" }
+  { id: 374, name: "Cherry Bomb", price: "₼300", category: "buket", image: "images/300 Cherry Bomb .jpg.jpeg" },
+  { id: 375, name: "Sweet Disorder", price: "₼230", category: "buket", image: "images/230 Sweet Disorder .jpg" },
+  { id: 376, name: "Blossom Effect", price: "₼75", category: "buket", image: "images/75 Blossom Effect .jpg" },
+  { id: 377, name: "Daydream", price: "₼120", category: "buket", image: "images/120 Daydream .jpg" },
+  { id: 378, name: "Love Language", price: "₼140", category: "buket", image: "images/140 Love Language .jpg" },
+  { id: 379, name: "Rose Fever", price: "₼70", category: "buket", image: "images/70 Rose Fever.jpg" },
+  { id: 380, name: "Soft Chaos", price: "₼235", category: "buket", image: "images/235 Soft Chaos .jpg" },
+  { id: 381, name: "Fever Dream", price: "₼130", category: "kompozisiya", image: "images/130. Fever Dream jpg.jpg" },
+  { id: 382, name: "Electric Bloom", price: "₼175", category: "buket", image: "images/175 Electric Bloom .jpg" },
+  { id: 383, name: "Bloom Theory", price: "₼150", category: "buket", image: "images/150 Bloom Theory .jpg" },
+  { id: 384, name: "Pink Matter", price: "₼240", category: "buket", image: "images/240 Pink Matter.jpg" },
+  { id: 385, name: "Floral Fiction", price: "₼140", category: "buket", image: "images/140.Floral Fiction jpg .jpg" },
+  { id: 386, name: "Muse", price: "₼100", category: "buket", image: "images/100 Muse .jpg" },
+  { id: 387, name: "Petal Therapy", price: "₼115", category: "buket", image: "images/115 Petal Therapy .jpg" },
+  { id: 388, name: "Pink Noise", price: "₼145", category: "buket", image: "images/145 Pink Noise .jpg" },
+  { id: 389, name: "Too Much", price: "₼185", category: "buket", image: "images/185 Too Much .jpg" },
+  { id: 390, name: "Wild Thing", price: "₼130", category: "buket", image: "images/130 Wild Thing .jpg" },
+  { id: 391, name: "Mood Swing", price: "₼210", category: "buket", image: "images/210 Mood Swing .jpg" }
 ];
 const categories = [
   { key: "buket", label: "Buketlər", img: "images/Buketlər.webp" },
