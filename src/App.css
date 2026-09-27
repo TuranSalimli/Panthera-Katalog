@@ -710,3 +710,85 @@ html {
     max-width: 100%;
   }
 }
+
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* AXTARIŞ QUTUSU */
+.search-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #555;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  z-index: 2;
+}
+
+.search-toggle-btn:hover {
+  background: #f3d9df;
+  color: #b3264d;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.search-box.open .search-toggle-btn {
+  background: #b3264d;
+  color: #fff;
+  border-color: #b3264d;
+}
+
+.search-input {
+  width: 0;
+  padding: 0;
+  margin-right: -42px;
+  padding-right: 42px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  height: 42px;
+  font-size: 14px;
+  opacity: 0;
+  outline: none;
+  transition: width 0.3s ease, padding 0.3s ease, opacity 0.2s ease;
+  position: relative;
+}
+
+.search-box.open .search-input {
+  width: 220px;
+  padding-left: 16px;
+  opacity: 1;
+  margin-right: -42px;
+}
+
+.search-input:focus {
+  border-color: #b3264d;
+}
+
+@media (max-width: 480px) {
+  .search-box.open .search-input {
+    width: 150px;
+  }
+}
+
+.no-results {
+  text-align: center;
+  color: #999;
+  padding: 30px 0;
+  grid-column: 1 / -1;
+}

@@ -1,6 +1,6 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import "./App.css";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaSearch } from "react-icons/fa";
 
 const flowers = [
   { id: 1, name: "Home", price: "₼120", category: "buket", image: "images/Home.jpg.webp" },
@@ -299,7 +299,7 @@ const flowers = [
   { id: 298, name: "Promise", price: "₼120", category: "gelin-buketleri", image: "images/120 Promise jpg.jpg.jpeg" },
   { id: 299, name: "Beloved", price: "₼130", category: "gelin-buketleri", image: "images/130 Beloved.jpg.jpeg" },
   { id: 300, name: "Chérie", price: "₼115", category: "gelin-buketleri", image: "images/115 Chérie.jpg.jpeg" },
-  { id: 301, name: "Éclat", price: "₼110", category: "gelin-buketleri", image: "images/110 Éclat .jpg.jpeg" },
+  { id: 301, name: "Eclat", price: "₼110", category: "gelin-buketleri", image: "images/110 Éclat .jpg.jpeg" },
   { id: 302, name: "Moonlight", price: "₼135", category: "gelin-buketleri", image: "images/135 Moonlight.jpg.jpeg" },
   { id: 303, name: "Jardin", price: "₼130", category: "gelin-buketleri", image: "images/130 Jardin.jpg.jpeg" },
   { id: 304, name: "Timeless", price: "₼100", category: "gelin-buketleri", image: "images/100 Timeless .jpg.jpeg" },
@@ -404,6 +404,9 @@ export default function App() {
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchOpen, setSearchOpen] = useState(false);
+
   const getPriceNumber = (price) => {
     return Number(price.replace("₼", "").replace(",", "."));
   };
@@ -419,7 +422,11 @@ export default function App() {
     const maxMatch =
       !maxPrice || price <= Number(maxPrice);
 
-    return categoryMatch && minMatch && maxMatch;
+    const searchMatch =
+      !searchQuery.trim() ||
+      f.name.toLowerCase().includes(searchQuery.trim().toLowerCase());
+
+    return categoryMatch && minMatch && maxMatch && searchMatch;
   });   
   if (sortOrder === "asc") {
     filtered.sort((a, b) => getPriceNumber(a.price) - getPriceNumber(b.price));
@@ -449,6 +456,20 @@ export default function App() {
     return () => window.removeEventListener("keydown", handler);
   }, []);
 
+  const searchInputRef = useRef(null);
+
+  const toggleSearch = useCallback(() => {
+    setSearchOpen((prev) => {
+      const next = !prev;
+      if (next) {
+        setTimeout(() => searchInputRef.current?.focus(), 100);
+      } else {
+        setSearchQuery("");
+      }
+      return next;
+    });
+  }, []);
+
   return (
     <>
 
@@ -456,7 +477,7 @@ export default function App() {
       <section className="section" id="catalog">
         <div className="container">
           <div className="filter-buttons">
-            
+
             <div className="category-grid">
 
               {categories.map(cat => (
@@ -503,6 +524,27 @@ export default function App() {
                   <option value="desc">Qiymət: Çoxdan aza</option>
                 </select>
               </div>
+
+              {/* AXTARIŞ (LUPA) */}
+              <div className={`search-box ${searchOpen ? "open" : ""}`}>
+                <input
+                  ref={searchInputRef}
+                  type="text"
+                  className="search-input"
+                  placeholder="Buketin adı ilə axtar..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={(e) => { if (e.key === "Escape") toggleSearch(); }}
+                />
+                <button
+                  type="button"
+                  className="search-toggle-btn"
+                  onClick={toggleSearch}
+                  aria-label="Axtarışı aç/bağla"
+                >
+                  <FaSearch />
+                </button>
+              </div>
             </div>
           </div>
 
@@ -528,6 +570,9 @@ export default function App() {
                 </div>
               </div>
             ))}
+            {filtered.length === 0 && (
+              <p className="no-results">Nəticə tapılmadı.</p>
+            )}
           </div>
         </div>
       </section>
