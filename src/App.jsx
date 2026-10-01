@@ -388,7 +388,21 @@ const flowers = [
   { id: 388, name: "Pink Noise", price: "₼145", category: "buket", image: "images/145 Pink Noise .jpg" },
   { id: 389, name: "Too Much", price: "₼185", category: "buket", image: "images/185 Too Much .jpg" },
   { id: 390, name: "Wild Thing", price: "₼130", category: "buket", image: "images/130 Wild Thing .jpg" },
-  { id: 391, name: "Mood Swing", price: "₼210", category: "buket", image: "images/210 Mood Swing .jpg" }
+  { id: 391, name: "Mood Swing", price: "₼210", category: "buket", image: "images/210 Mood Swing .jpg" },
+  { id: 392, name: "Slow Motion", price: "₼110", category: "buket", image: "images/110 Slow Motion .jpg" },
+  { id: 393, name: "Lost Signal", price: "₼80", category: "buket", image: "images/80 Lost Signal .jpg" },
+  { id: 394, name: "Heatwave", price: "₼135", category: "buket", image: "images/135 Heatwave .jpg" },
+  { id: 395, name: "Slow Burn", price: "₼180", category: "buket", image: "images/180 Slow Burn .jpg" },
+  { id: 396, name: "Skin Deep", price: "₼140", category: "buket", image: "images/140 Skin Deep .jpg" },
+  { id: 397, name: "Velour Pulse", price: "₼190", category: "buket", image: "images/190 Velour Pulse .jpg" },
+  { id: 398, name: "Teacher Day", price: "₼150", category: "kompozisiya", image: "images/150 Teacher Day.jpg" },
+  { id: 399, name: "Blue Hour", price: "₼130", category: "buket", image: "images/130 Blue Hour .jpg" },
+  { id: 400, name: "Private Garden", price: "₼80", category: "buket", image: "images/80 Private Garden .jpg" },
+  { id: 401, name: "Falling Softly", price: "₼95", category: "buket", image: "images/95 Falling Softly .jpg" },
+  { id: 402, name: "Teacher Day Box", price: "₼145", category: "kompozisiya", image: "images/145 Teabher Day Box .jpg" },
+  { id: 403, name: "Lucid", price: "₼130", category: "buket", image: "images/130Lucid   .jpg" },
+  { id: 404, name: "Satin Memory", price: "₼300", category: "buket", image: "images/300 Satin Memory .jpg" },
+  { id: 405, name: "Cold Desire", price: "₼170", category: "buket", image: "images/170 Cold Desire  .jpg" }
 ];
 const categories = [
   { key: "buket", label: "Buketlər", img: "images/Buketlər.webp" },
