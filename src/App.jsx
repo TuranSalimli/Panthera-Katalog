@@ -402,7 +402,12 @@ const flowers = [
   { id: 402, name: "Teacher Day Box", price: "₼145", category: "kompozisiya", image: "images/145 Teabher Day Box .jpg" },
   { id: 403, name: "Lucid", price: "₼130", category: "buket", image: "images/130Lucid   .jpg" },
   { id: 404, name: "Satin Memory", price: "₼300", category: "buket", image: "images/300 Satin Memory .jpg" },
-  { id: 405, name: "Cold Desire", price: "₼170", category: "buket", image: "images/170 Cold Desire  .jpg" }
+  { id: 405, name: "Cold Desire", price: "₼170", category: "buket", image: "images/170 Cold Desire  .jpg" },
+  { id: 406, name: "Autumn Bride", price: "₼220", category: "buket", image: "images/IMG_0488 (1).jpg" },
+  { id: 407, name: "Teacher Day Luxury Box", price: "₼150", category: "kompozisiya", image: "images/IMG_8516.JPG (1).jpeg" },
+  { id: 408, name: "Orange Tulip Dream", price: "₼150", category: "buket", image: "images/IMG_9303 (1).jpg" },
+  { id: 409, name: "Exotic Burgundy", price: "₼210", category: "buket", image: "images/IMG_9308.JPG (1).jpeg" },
+  { id: 410, name: "Velvet Red Roses", price: "₼75", category: "buket", image: "images/IMG_9312.JPG (1).jpeg" },
 ];
 const categories = [
   { key: "buket", label: "Buketlər", img: "images/Buketlər.webp" },
